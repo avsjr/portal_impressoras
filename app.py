@@ -60,13 +60,13 @@ def ml_main():
 def ml_log():
     return render_template('ml_log.html', impressoras=masterline_log_printers)
 
-@app.route('/pl_flexo')
+@app.route('/ml_flexo')
 def pl_flexo():
-    return render_template('pl_flexo.html', impressoras=masterline_flexo_printers)
+    return render_template('ml_flexo.html', impressoras=masterline_flexo_printers)
 
-@app.route('/pl_emb')
+@app.route('/ml_emb')
 def pl_emb():
-    return render_template('pl_emb.html', impressoras=masterline_emb_printers)
+    return render_template('ml_emb.html', impressoras=masterline_emb_printers)
 
 # Define routes for other office's printer pages...
 

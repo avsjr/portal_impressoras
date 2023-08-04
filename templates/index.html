@@ -2,53 +2,53 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Portal de Mapeamento de Impressoras</title>
+    <title>Portal de Impressoras</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Localidades do Grupo SKALA</h1>
+    <div id="localidade">
+        <div class="localidade">
+            <a href="/pl_csc">
+                <img src="{{ url_for('static', filename='platina.jpg') }}" alt="Platina CSC">
+                <p>Platina CSC</p>
+            </a>
+        </div>
 
-    <div class="office">
-        <a href="/pl_csc">
-            <img src="{{ url_for('static', filename='platina.jpg') }}" alt="Platina CSC">
-            <p>Platina CSC</p>
-        </a>
+        <div class="localidade">
+            <a href="/pl_log">
+                <img src="{{ url_for('static', filename='platina.jpg') }}" alt="Platina LOG">
+                <p>Platina LOG</p>
+            </a>
+        </div>
+
+        <div class="localidade">
+            <a href="/ml_main">
+                <img src="{{ url_for('static', filename='masterline.jpg') }}" alt="Masterline">
+                <p>Masterline</p>
+            </a>
+        </div>
+
+        <div class="localidade">
+            <a href="/ml_log">
+                <img src="{{ url_for('static', filename='masterline.jpg') }}" alt="Masterline LOG">
+                <p>Masterline LOG</p>
+            </a>
+        </div>
+
+        <div class="localidade">
+            <a href="/ml_flexo">
+                <img src="{{ url_for('static', filename='masterline.jpg') }}" alt="Flexografia">
+                <p>Flexografia</p>
+            </a>
+        </div>
+
+        <div class="localidade">
+            <a href="/ml_emb">
+                <img src="{{ url_for('static', filename='masterline.jpg') }}" alt="Embalagens">
+                <p>Embalagens</p>
+            </a>
+        </div>
     </div>
-
-    <div class="office">
-        <a href="/platina_log">
-            <img src="{{ url_for('static', filename='platina.jpg') }}" alt="Platina LOG">
-            <p>Platina LOG</p>
-        </a>
-    </div>
-
-    <div class="office">
-        <a href="/ml_main">
-            <img src="{{ url_for('static', filename='masterline.jpg') }}" alt="Masterline">
-            <p>Masterline</p>
-        </a>
-    </div>
-
-    <div class="office">
-        <a href="/ml_log">
-            <img src="{{ url_for('static', filename='masterline.jpg') }}" alt="Masterline LOG">
-            <p>Masterline LOG</p>
-        </a>
-    </div>
-
-    <div class="office">
-        <a href="/ml_flexo">
-            <img src="{{ url_for('static', filename='masterline.jpg') }}" alt="Flexografia">
-            <p>Flexografia</p>
-        </a>
-    </div>
-
-    <div class="office">
-        <a href="/ml_emba">
-            <img src="{{ url_for('static', filename='masterline.jpg') }}" alt="Embalagens">
-            <p>Embalagens</p>
-        </a>
-    </div>
-
 </body>
 </html>
