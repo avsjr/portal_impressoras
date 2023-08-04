@@ -3,6 +3,22 @@ import subprocess
 
 app = Flask(__name__, static_url_path='', static_folder='static')
 
+@app.route('/addPrinter', methods=['POST'])
+def add_printer():
+    data = request.get_json()
+    printer_name = data.get('printerName')
+    
+    try:
+        # Execute PowerShell script to add printer
+        script = f'(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("\\\\192.0.0.61\\csc-adm-preto-sp5200s")'
+        result = subprocess.run(['powershell', '-Command', script], capture_output=True, text=True, check=True)
+        print(result.stdout)  # Print the output of the PowerShell script
+        return jsonify({'message': 'Printer added successfully'}), 200
+    except subprocess.CalledProcessError as e:
+        print(e.stderr)  # Print any error message from the PowerShell script
+        return jsonify({'message': 'Failed to add printer.'}), 500
+
+    
 # Define printer data for each office
 platina_csc_printers = [
     { "nome": "ADM - Frente e Verso", "caminho": "\\192.0.0.61\\csc-adm-frenteverso-sp5200s" },
