@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Portal de Mapeamento de Impressoras</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Impressoras Disponíveis</h1>
     <div id="impressoras">
         <div class="impressora">
-            <img src="printer1.jpg" alt="CSC-ADM-PRETO">
+            <img src="{{ url_for('static', filename='printer1.jpg') }}" alt="CSC-ADM-PRETO">
             <p>CSC-ADM-PRETO</p>
             <button class="btn-adicionar">Adicionar</button>
         </div>
         <div class="impressora">
-            <img src="printer2.jpg" alt="CSC-ADM-RASCUNHO">
+            <img src="{{ url_for('static', filename='printer2.jpg') }}" alt="CSC-ADM-RASCUNHO">
             <p>CSC-ADM-RASCUNHO</p>
             <button class="btn-adicionar">Adicionar</button>
         </div>

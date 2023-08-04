@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 import subprocess
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder='.')
 
 impressoras = [
     { "nome": "CSC-ADM-PRETO", "caminho": "\\\\192.0.0.61\\csc-adm-preto-ps5200s" },
