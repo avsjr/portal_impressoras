@@ -9,17 +9,17 @@
     <h1>Impressoras - Escritório Platina CSC</h1>
     <div id="impressoras">
         <div class="impressora">
-            <img src="{{ url_for('static', filename='adm-comerical.jpg') }}" alt="ADM - Preto">
+            <img src="{{ url_for('static', filename='adm-comercial.jpg') }}" alt="ADM - Preto">
             <p>ADM - Preto</p>
             <button class="btn-adicionar">Adicionar</button>
         </div>
         <div class="impressora">
-            <img src="{{ url_for('static', filename='adm-coercial.jpg') }}" alt="ADM - Frente e Verso">
+            <img src="{{ url_for('static', filename='adm-comercial.jpg') }}" alt="ADM - Frente e Verso">
             <p>ADM - Frente e Verso</p>
             <button class="btn-adicionar">Adicionar</button>
         </div>
                 <div class="impressora">
-            <img src="{{ url_for('static', filename='adm-comerical.jpg') }}" alt="ADM - Rascunho">
+            <img src="{{ url_for('static', filename='adm-comercial.jpg') }}" alt="ADM - Rascunho">
             <p>ADM - Rascunho</p>
             <button class="btn-adicionar">Adicionar</button>
         </div>
@@ -70,7 +70,8 @@
         </div>
     </div>
 
-    <!-- Include JavaScript for handling printer addition -->
+    <!-- Reference the impressoras.js script -->
+    <script src="{{ url_for('static', filename='impressoras.js') }}"></script>
 
 </body>
 </html>

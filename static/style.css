@@ -31,7 +31,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-button {
+.btn-adicionar {
     cursor: pointer;
     padding: 5px 10px;
     background-color: #007bff;
@@ -40,6 +40,6 @@ button {
     border-radius: 4px;
 }
 
-button:hover {
+.btn-adicionar:hover {
     background-color: #0056b3;
 }
