@@ -6,21 +6,49 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Impressoras Disponíveis</h1>
-    <div id="impressoras">
-        <div class="impressora">
-            <img src="{{ url_for('static', filename='printer1.jpg') }}" alt="CSC-ADM-PRETO">
-            <p>CSC-ADM-PRETO</p>
-            <button class="btn-adicionar">Adicionar</button>
-        </div>
-        <div class="impressora">
-            <img src="{{ url_for('static', filename='printer2.jpg') }}" alt="CSC-ADM-RASCUNHO">
-            <p>CSC-ADM-RASCUNHO</p>
-            <button class="btn-adicionar">Adicionar</button>
-        </div>
+    <h1>Localidades do Grupo SKALA</h1>
+
+    <div class="office">
+        <a href="/pl_csc">
+            <img src="{{ url_for('static', filename='platina.jpg') }}" alt="Platina CSC">
+            <p>Platina CSC</p>
+        </a>
     </div>
 
-    <!-- Referenciar o arquivo JavaScript externo -->
-    <script src="impressoras.js"></script>
+    <div class="office">
+        <a href="/platina_log">
+            <img src="{{ url_for('static', filename='platina.jpg') }}" alt="Platina LOG">
+            <p>Platina LOG</p>
+        </a>
+    </div>
+
+    <div class="office">
+        <a href="/ml_main">
+            <img src="{{ url_for('static', filename='masterline.jpg') }}" alt="Masterline">
+            <p>Masterline</p>
+        </a>
+    </div>
+
+    <div class="office">
+        <a href="/ml_log">
+            <img src="{{ url_for('static', filename='masterline.jpg') }}" alt="Masterline LOG">
+            <p>Masterline LOG</p>
+        </a>
+    </div>
+
+    <div class="office">
+        <a href="/ml_flexo">
+            <img src="{{ url_for('static', filename='masterline.jpg') }}" alt="Flexografia">
+            <p>Flexografia</p>
+        </a>
+    </div>
+
+    <div class="office">
+        <a href="/ml_emba">
+            <img src="{{ url_for('static', filename='masterline.jpg') }}" alt="Embalagens">
+            <p>Embalagens</p>
+        </a>
+    </div>
+
 </body>
 </html>
