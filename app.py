@@ -49,7 +49,18 @@ platina_csc_printers = {
 
 
 platina_log_printers = {
-    
+    "ADM - Colorida": "\\\\192.0.0.61\\platina-log-adc-colorida",
+    "ADM - Preto": "\\\\192.0.0.61\\platina-log-adm-preto",
+    "ADM - FRascunho": "\\\\192.0.0.61\\platina-log-adm-rascunho",
+    "Ambulatório": "\\\\192.0.0.61\\platina-log-ambulatorio-preto-m320f",
+    "Expedição - Frente e Verso": "\\\\192.0.0.61\\platina-log-exp-frenteverso-c368",
+    "Expedição - Preto": "\\\\192.0.0.61\\platina-log-exp-preto-c368",
+    "Expedição - Rascunho": "\\\\192.0.0.61\\platina-log-exp-rascunho-c368",
+    "Expedição - Zebra": "\\\\192.0.0.61\\log-exp-zebra-zt230",
+    "Recebimento": "\\\\192.0.0.61\\platina-log-rec-zgk420t",
+    "Segurança - Frente e Verso": "\\\\192.0.0.61\\platina-log-seg-frenteverso-sp3710sf",
+    "Segurança - Preto": "\\\\192.0.0.61\\platina-log-seg-preto-sp3710sf",
+    "Segurança - Rascunho": "\\\\192.0.0.61\\platina-log-seg-rascunho-sp3710sf"
 }
 
 masterline_main_printers = {

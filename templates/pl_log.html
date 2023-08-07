@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Impressoras - Platina Log</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Impressoras - Platina Log</h1>
+    <div id="impressoras">
+        <!-- Administrativo -->
+        <div class="log_administrativo_impressora">
+            <h2>Administrativo</h2> 
+            <img src="{{ url_for('static', filename='adm-comercial.jpg') }}" alt="ADM Logo"></h2>
+            <div class="impressora">
+                <p>ADM - Preto</p>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p>ADM - Frente e Verso</p>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p>ADM - Rascunho</p>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </div>
+        
+        <!-- Ambulatório -->
+        <div class="exportacao_impressora">
+            <h2>Ambulatório</h2> 
+            <img class="printer-logo" src="{{ url_for('static', filename='exportacao.jpg') }}" alt="Exportação Logo"></h2>
+            <div class="impressora">
+                <p>Ambulatório</p>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+           
+            <!-- Expedição -->
+        <div class="comercial_impressora">
+            <h2>Expedição</h2> 
+            <img class="printer-logo" src="{{ url_for('static', filename='adm-comercial.jpg') }}" alt="Comercial Logo"></h2>
+            <div class="impressora">
+                <p>Expedição - Preto</p>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p>Expedição - Frente e Verso</p>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p>Expedição - Rascunho</p>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </div>
+
+        <!-- Marketing-->
+        <div class="marketing_impressora">
+            <h2>Marketing</h2> 
+            <img class="printer-logo" src="{{ url_for('static', filename='marketing.jpg') }}" alt="Marketing Logo"></h2>
+            <div class="impressora">
+                <p>Marketing - Colorido</p>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p>Marketing - Preto</p>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p>Marketing - A3</p>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p>Marketing - Frente e Verso</p>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+        <!-- Home button -->
+        <a href="{{ url_for('index') }}" class="home-button">Home</a>
+
+    <!-- Reference the impressoras.js script -->
+    <script src="{{ url_for('static', filename='impressoras.js') }}"></script>
+
+</body>
+</html>

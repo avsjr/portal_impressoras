@@ -36,17 +36,17 @@ h1 {
     margin: 10px;
 }
 
-.administrativo_impressora {
+.csc_administrativo_impressora {
     position: absolute; /* or 'relative' based on your needs */
     top: 100px; /* adjust as needed */
-    left: 200px; /* adjust as needed */
+    left: 150px; /* adjust as needed */
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
 }
 
-.administrativo_impressora img {
+.csc_administrativo_impressora img {
     width: 70px;
     height: 70px;
     border: 1px solid #ccc;
@@ -75,7 +75,7 @@ h1 {
 .comercial_impressora {
     position: absolute; /* or 'relative' based on your needs */
     top: 100px; /* adjust as needed */
-    left: 800px; /* adjust as needed */
+    left: 850px; /* adjust as needed */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,7 +93,7 @@ h1 {
 .marketing_impressora {
     position: absolute; /* or 'relative' based on your needs */
     top: 100px; /* adjust as needed */
-    left: 1100px; /* adjust as needed */
+    left: 1150px; /* adjust as needed */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,18 +108,26 @@ h1 {
     margin-bottom: 10px;
 }
 
-.btn-adicionar {
-    cursor: pointer;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+.log_administrativo_impressora {
+    position: absolute; /* or 'relative' based on your needs */
+    top: 100px; /* adjust as needed */
+    left: 150px; /* adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
 }
 
-.btn-adicionar:hover {
-    background-color: #0056b3;
+.log_administrativo_impressora img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
+
+
+/* Estilos Index */
 
 #localidade {
     display: flex;
@@ -132,7 +140,7 @@ h1 {
 .platina {
     position: absolute; /* or 'relative' based on your needs */
     top: 200px; /* adjust as needed */
-    left: 400px; /* adjust as needed */
+    left: 500px; /* adjust as needed */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,7 +157,7 @@ h1 {
 }
 
 .platina p {
-    font-size: 18px;
+    font-size: 17px;
     margin: 10;
     display: flex;
     flex-direction: column;
@@ -178,7 +186,7 @@ h1 {
 }
 
 .masterline p {
-    font-size: 18px;
+    font-size: 17px;
     margin: 10;
     display: flex;
     text-align: center;
@@ -187,6 +195,8 @@ h1 {
     justify-content: center;*/
     color: #343a40; /* Dark gray color */
 }
+
+/* Estilos Botão Home */
 
 .home-button {
     position: absolute; /* or 'relative' based on your needs */
@@ -204,4 +214,19 @@ h1 {
 
 .home-button:hover {
     background-color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Estilos Botão Adicionar */
+
+.btn-adicionar {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-adicionar:hover {
+    background-color: #0056b3;
 }
