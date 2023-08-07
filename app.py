@@ -5,12 +5,24 @@ app = Flask(__name__, static_url_path='', static_folder='static')
 
 @app.route('/addPrinter', methods=['POST'])
 def add_printer():
-    data = request.get_json()
+    data = request.json
     printer_name = data.get('printerName')
-    
+
+    caminho_impressora = None
+
+    # Check each printer dictionary for the given printer name
+    for printer_dict in [platina_csc_printers, platina_log_printers, masterline_main_printers,
+                         masterline_log_printers, masterline_flexo_printers, masterline_emb_printers]:
+        if printer_name in printer_dict:
+            caminho_impressora = printer_dict[printer_name]
+            break
+
+    if caminho_impressora is None:
+        return jsonify({'message': 'Printer not found.'}), 404
+
     try:
         # Execute PowerShell script to add printer
-        script = f'(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("\\\\192.0.0.61\\csc-adm-preto-sp5200s")'
+        script = f'(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("{caminho_impressora}")'
         result = subprocess.run(['powershell', '-Command', script], capture_output=True, text=True, check=True)
         print(result.stdout)  # Print the output of the PowerShell script
         return jsonify({'message': 'Printer added successfully'}), 200
@@ -18,42 +30,43 @@ def add_printer():
         print(e.stderr)  # Print any error message from the PowerShell script
         return jsonify({'message': 'Failed to add printer.'}), 500
 
-    
+           
 # Define printer data for each office
-platina_csc_printers = [
-    { "nome": "ADM - Frente e Verso", "caminho": "\\192.0.0.61\\csc-adm-frenteverso-sp5200s" },
-    { "nome": "ADM - Preto", "caminho": "\\192.0.0.61\\csc-adm-preto-sp5200s" },
-    { "nome": "ADM - Rascunho", "caminho": "\\192.0.0.61\\csc-adm-rascunho-sp5200s" },
-    { "nome": "Comercial - Preto", "caminho": "\\192.0.0.61\\csc-comercial-preto-sp5200s" },
-    { "nome": "Comercial - Rascunho", "caminho": "\\192.0.0.61\\csc-comercial-rascunho-sp5200s" },
-    { "nome": "Exportação - Frente e Verso ", "caminho": "\\192.0.0.61\\csc-exportacao-frenteverso-sp377sfnwx" },
-    { "nome": "Exportação - Preto", "caminho": "\\192.0.0.61\\csc-exportacão-preto-sp377sf" },
-    { "nome": "Exportação - Rascunho", "caminho": "\\192.0.0.61\\csc-exportacao-rascunho-sp377sfnwx" },
-    { "nome": "Marketing - A3 ", "caminho": "\\192.0.0.61\\csc-mkt-a3-c368" },
-    { "nome": "Marketing - Colorida", "caminho": "\\192.0.0.61\\csc-mkt-colorida-c368" },
-    { "nome": "Marketing - Frente e Verso", "caminho": "\\192.0.0.61\\esc-mkt-frenteverso-c368" },
-    { "nome": "Marketing - Preto", "caminho": "\\192.0.0.61\\esc-mkt-preto-c368" },
-]
+platina_csc_printers = {
+    "ADM - Frente e Verso": "\\\\192.0.0.61\\csc-adm-frenteverso-sp5200s",
+    "ADM - Preto": "\\\\192.0.0.61\\csc-adm-preto-sp5200s",
+    "ADM - Rascunho": "\\\\192.0.0.61\\csc-adm-rascunho-sp5200s",
+    "Exportação - Frente e Verso": "\\\\192.0.0.61\csc-exportacao-frenteverso-sp377sfnwx",
+    "Exportação - Preto": "\\\\192.0.0.61\\csc-exportacao-preto-sp377sf",
+    "Exportação - Rascunho": "\\\\192.0.0.61\\csc-exportacao-rascunho-sp377sfnwx",
+    "Comercial - Preto": "\\\\192.0.0.61\\csc-comercial-preto-sp5200s",
+    "Comercial - Rascunho": "\\\\192.0.0.61\\csc-comercial-rascunho-sp5200s",
+    "Marketing - A3": "\\\\192.0.0.61\\csc-mkt-a3-c368",
+    "Marketing - Colorido": "\\\\192.0.0.61\\csc-mkt-colorida-c368",
+    "Marketing - Frente e Verso": "\\\\192.0.0.61\\csc-mkt-frenteverso-c368",
+    "Marketing - Preto": "\\\\192.0.0.61\\csc-mkt-preto-c368"
+}
 
-platina_log_printers = [
-    
-]
 
-masterline_main_printers = [
+platina_log_printers = {
     
-]
+}
 
-masterline_log_printers = [
+masterline_main_printers = {
     
-]
+}
 
-masterline_flexo_printers = [
+masterline_log_printers = {
     
-]
+}
 
-masterline_emb_printers = [
+masterline_flexo_printers = {
     
-]
+}
+
+masterline_emb_printers = {
+    
+}
 
 # Define routes for each office's printer page
 @app.route('/')
