@@ -8,8 +8,16 @@ body {
 }
 
 h1 {
+    position: absolute; /* or 'relative' based on your needs */
+    top: 50px; /* adjust as needed */
+    left: 600px; /* adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
     font-size: 20px;
     margin-bottom: 20px;
+    color: #0a0a0a; /* Indigo color */
 }
 
 #impressoras {
@@ -17,7 +25,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 1000px; /* Define a largura máxima para o contêiner */
+    max-width: fit-content; /* Define a largura máxima para o contêiner */
     margin-top: 30px; /* Adicione um espaço acima do contêiner */
 }
 
@@ -28,7 +36,71 @@ h1 {
     margin: 10px;
 }
 
-.impressora img {
+.administrativo_impressora {
+    position: absolute; /* or 'relative' based on your needs */
+    top: 100px; /* adjust as needed */
+    left: 200px; /* adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.administrativo_impressora img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.exportacao_impressora {
+    position: absolute; /* or 'relative' based on your needs */
+    top: 100px; /* adjust as needed */
+    left: 500px; /* adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.exportacao_impressora img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.comercial_impressora {
+    position: absolute; /* or 'relative' based on your needs */
+    top: 100px; /* adjust as needed */
+    left: 800px; /* adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.comercial_impressora img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.marketing_impressora {
+    position: absolute; /* or 'relative' based on your needs */
+    top: 100px; /* adjust as needed */
+    left: 1100px; /* adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.marketing_impressora img {
     width: 70px;
     height: 70px;
     border: 1px solid #ccc;
@@ -57,7 +129,10 @@ h1 {
     margin-top: 30px;
 }
 
-.localidade {
+.platina {
+    position: absolute; /* or 'relative' based on your needs */
+    top: 200px; /* adjust as needed */
+    left: 400px; /* adjust as needed */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,19 +140,68 @@ h1 {
     margin: 30px;
 }
 
-.localidade img {
-    width: 90px;
-    height: 90px;
+.platina img {
+    width: 130px;
+    height: 130px;
     border: 1px solid #ccc;
     border-radius: 50%;
     margin-bottom: 10px;
 }
 
-.localidade p {
-    font-size: 15px;
+.platina p {
+    font-size: 18px;
     margin: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #343a40; /* Dark gray color */
+}
+
+.masterline {
+    position: absolute; /* or 'relative' based on your needs */
+    top: 200px; /* adjust as needed */
+    left: 800px; /* adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin: 30px;
+}
+
+.masterline img {
+    width: 130px;
+    height: 130px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.masterline p {
+    font-size: 18px;
+    margin: 10;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+   /* align-items: center;
+    justify-content: center;*/
+    color: #343a40; /* Dark gray color */
+}
+
+.home-button {
+    position: absolute; /* or 'relative' based on your needs */
+    top: 50px; /* adjust as needed */
+    left: 100px; /* adjust as needed */
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color */
+    color: #fff; /* White color */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.home-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
 }
