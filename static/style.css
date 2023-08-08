@@ -20,13 +20,47 @@ h1 {
     color: #0a0a0a; /* Indigo color */
 }
 
+/* Estilos Index */
+#localidade {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    margin-top: 30px;
+}
+
+.platina,
+.masterline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    margin: 30px;
+}
+
+.platina img,
+.masterline img {
+    width: 130px;
+    height: 130px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.platina p,
+.masterline p {
+    font-size: 17px;
+    margin: auto;
+    text-align: center;
+    color: #343a40; /* Dark gray color */
+}
+
+/* Estilos geral impressoras */
 #impressoras {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: fit-content; /* Define a largura máxima para o contêiner */
-    margin-top: 30px; /* Adicione um espaço acima do contêiner */
+    justify-content: space-between; /* Distribute items with space between them */
+    align-items: flex-start; /* Align items to the top */
+    max-width: 1000px; /* Adjust as needed */
+    margin-top: 30px;
 }
 
 .impressora {
@@ -37,224 +71,77 @@ h1 {
 }
 
 /* Estilos pl_csc */
-
-.csc_administrativo_impressora {
-    position: absolute; /* or 'relative' based on your needs */
-    top: 100px; /* adjust as needed */
-    left: 150px; /* adjust as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-}
-
-.csc_administrativo_impressora img {
-    width: 70px;
-    height: 70px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.exportacao_impressora {
-    position: absolute; /* or 'relative' based on your needs */
-    top: 100px; /* adjust as needed */
-    left: 500px; /* adjust as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-}
-
-.exportacao_impressora img {
-    width: 70px;
-    height: 70px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.comercial_impressora {
-    position: absolute; /* or 'relative' based on your needs */
-    top: 100px; /* adjust as needed */
-    left: 850px; /* adjust as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-}
-
-.comercial_impressora img {
-    width: 70px;
-    height: 70px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
+.csc_administrativo_impressora,
+.exportacao_impressora,
+.comercial_impressora,
 .marketing_impressora {
-    position: absolute; /* or 'relative' based on your needs */
-    top: 100px; /* adjust as needed */
-    left: 1150px; /* adjust as needed */
+    font-size: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: calc(25% - 20px); /* Adjust width and margin as needed */
     margin: 10px;
 }
 
+.csc_administrativo_impressora img,
+.exportacao_impressora img,
+.comercial_impressora img,
 .marketing_impressora img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border: 1px solid #ccc;
     border-radius: 50%;
     margin-bottom: 10px;
 }
 
-/* Estilos pl_log */
-
-.log_administrativo_impressora {
-    position: absolute; /* or 'relative' based on your needs */
-    top: 100px; /* adjust as needed */
-    left: 100px; /* adjust as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-}
-
-.log_administrativo_impressora img {
-    width: 70px;
-    height: 70px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.log_ambulatorio_impressora {
-    position: absolute; /* or 'relative' based on your needs */
-    top: 100px; /* adjust as needed */
-    left: 300px; /* adjust as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-}
-
-.log_ambulatorio_impressora img {
-    width: 70px;
-    height: 70px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.log_expedicao_impressora {
-    position: absolute; /* or 'relative' based on your needs */
-    top: 0px; /* adjust as needed */
-    left: 200px; /* adjust as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-}
-
-.log_expedicao_impressora img {
-    width: 70px;
-    height: 70px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.log_expedicao_impressora_zebra {
-    position: absolute; /* or 'relative' based on your needs */
-    top: 500px; /* adjust as needed */
-    left: 400px; /* adjust as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-}
-
-.log_expedicao_impressora_zebra img {
-    width: 70px;
-    height: 70px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-/* Estilos Index */
-
-#localidade {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1000px;
-    margin-top: 30px;
-}
-
-.platina {
-    position: absolute; /* or 'relative' based on your needs */
-    top: 200px; /* adjust as needed */
-    left: 500px; /* adjust as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    margin: 30px;
-}
-
-.platina img {
-    width: 130px;
-    height: 130px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.platina p {
+.csc_administrativo_impressora p,
+.exportacao_impressora p,
+.comercial_impressora p,
+.marketing_impressora p {
     font-size: 17px;
-    margin: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin: auto;
+    text-align: center;
     color: #343a40; /* Dark gray color */
 }
 
-.masterline {
-    position: absolute; /* or 'relative' based on your needs */
-    top: 200px; /* adjust as needed */
-    left: 800px; /* adjust as needed */
+/* Estilos pl_log */
+.log_administrativo_impressora,
+.ambulatorio_impressora,
+.expedicao_impressora,
+.recebimento_impressora,
+.seguranca_impressora {
+    font-size: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
-    margin: 30px;
+    width: calc(20% - 10px); /* Adjust width and margin as needed */
+    margin: 10px;
 }
 
-.masterline img {
-    width: 130px;
-    height: 130px;
+.log_administrativo_impressora img, 
+.ambulatorio_impressora img,
+.expedicao_impressora img,
+.recebimento_impressora img,
+.seguranca_impressora img {
+    width: 80px;
+    height: 80px;
     border: 1px solid #ccc;
     border-radius: 50%;
     margin-bottom: 10px;
 }
 
-.masterline p {
+.log_administrativo_impressora p,
+.ambulatorio_impressora p,
+.expedicao_impressora p,
+.recebimento_impressora p,
+.seguranca_impressora p {
     font-size: 17px;
-    margin: 10;
-    display: flex;
+    margin: auto;
     text-align: center;
-    flex-direction: column;
-   /* align-items: center;
-    justify-content: center;*/
     color: #343a40; /* Dark gray color */
 }
 
 /* Estilos Botão Home */
-
 .home-button {
     position: absolute; /* or 'relative' based on your needs */
     top: 50px; /* adjust as needed */
@@ -274,7 +161,6 @@ h1 {
 }
 
 /* Estilos Botão Adicionar */
-
 .btn-adicionar {
     cursor: pointer;
     padding: 5px 10px;
