@@ -11,34 +11,34 @@
         <!-- Administrativo -->
         <div class="log_administrativo_impressora">
             <h2>Administrativo</h2> 
-            <img src="{{ url_for('static', filename='adm-comercial.jpg') }}" alt="ADM Logo"></h2>
+            <img src="{{ url_for('static', filename='images/pl_log_adm.jpg') }}" alt="ADM Logo"></h2>
             <div class="impressora">
-                <p>ADM - Preto</p>
+                <p>LOG ADM - Preto</p>
                 <button class="btn-adicionar">Adicionar</button>
             </div>
             <div class="impressora">
-                <p>ADM - Frente e Verso</p>
+                <p>LOG ADM - Frente e Verso</p>
                 <button class="btn-adicionar">Adicionar</button>
             </div>
             <div class="impressora">
-                <p>ADM - Rascunho</p>
+                <p>LOG ADM - Rascunho</p>
                 <button class="btn-adicionar">Adicionar</button>
             </div>
         </div>
         
         <!-- Ambulatório -->
-        <div class="exportacao_impressora">
+        <div class="log_ambulatorio_impressora">
             <h2>Ambulatório</h2> 
-            <img class="printer-logo" src="{{ url_for('static', filename='exportacao.jpg') }}" alt="Exportação Logo"></h2>
+            <img class="printer-logo" src="{{ url_for('static', filename='images/pl_log_ambulatorio.jpg') }}" alt=""></h2>
             <div class="impressora">
                 <p>Ambulatório</p>
                 <button class="btn-adicionar">Adicionar</button>
             </div>
            
             <!-- Expedição -->
-        <div class="comercial_impressora">
+        <div class="log_expedicao_impressora">
             <h2>Expedição</h2> 
-            <img class="printer-logo" src="{{ url_for('static', filename='adm-comercial.jpg') }}" alt="Comercial Logo"></h2>
+            <img class="printer-logo" src="{{ url_for('static', filename='images/pl_log_exp.jpg') }}" alt=""></h2>
             <div class="impressora">
                 <p>Expedição - Preto</p>
                 <button class="btn-adicionar">Adicionar</button>
@@ -51,12 +51,17 @@
                 <p>Expedição - Rascunho</p>
                 <button class="btn-adicionar">Adicionar</button>
             </div>
+            <div class="impressora"> 
+                <img class="printer-logo" src="{{ url_for('static', filename='images/pl_log_exp_zebra.jpg') }}" alt=""></h2>    
+                <p>Expedição - Zebra</p>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
         </div>
 
         <!-- Marketing-->
         <div class="marketing_impressora">
             <h2>Marketing</h2> 
-            <img class="printer-logo" src="{{ url_for('static', filename='marketing.jpg') }}" alt="Marketing Logo"></h2>
+            <img class="printer-logo" src="{{ url_for('static', filename='marketing.jpg') }}" alt=""></h2>
             <div class="impressora">
                 <p>Marketing - Colorido</p>
                 <button class="btn-adicionar">Adicionar</button>

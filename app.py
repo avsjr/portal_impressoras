@@ -33,9 +33,9 @@ def add_printer():
            
 # Define printer data for each office
 platina_csc_printers = {
-    "ADM - Frente e Verso": "\\\\192.0.0.61\\csc-adm-frenteverso-sp5200s",
-    "ADM - Preto": "\\\\192.0.0.61\\csc-adm-preto-sp5200s",
-    "ADM - Rascunho": "\\\\192.0.0.61\\csc-adm-rascunho-sp5200s",
+    "CSC ADM - Frente e Verso": "\\\\192.0.0.61\\csc-adm-frenteverso-sp5200s",
+    "CSC ADM - Preto": "\\\\192.0.0.61\\csc-adm-preto-sp5200s",
+    "CSC ADM - Rascunho": "\\\\192.0.0.61\\csc-adm-rascunho-sp5200s",
     "Exportação - Frente e Verso": "\\\\192.0.0.61\csc-exportacao-frenteverso-sp377sfnwx",
     "Exportação - Preto": "\\\\192.0.0.61\\csc-exportacao-preto-sp377sf",
     "Exportação - Rascunho": "\\\\192.0.0.61\\csc-exportacao-rascunho-sp377sfnwx",
@@ -49,9 +49,9 @@ platina_csc_printers = {
 
 
 platina_log_printers = {
-    "ADM - Colorida": "\\\\192.0.0.61\\platina-log-adc-colorida",
-    "ADM - Preto": "\\\\192.0.0.61\\platina-log-adm-preto",
-    "ADM - FRascunho": "\\\\192.0.0.61\\platina-log-adm-rascunho",
+    "LOG ADM - Colorida": "\\\\192.0.0.61\\platina-log-adc-colorida",
+    "LOG ADM - Preto": "\\\\192.0.0.61\\platina-log-adm-preto",
+    "LOG ADM - FRascunho": "\\\\192.0.0.61\\platina-log-adm-rascunho",
     "Ambulatório": "\\\\192.0.0.61\\platina-log-ambulatorio-preto-m320f",
     "Expedição - Frente e Verso": "\\\\192.0.0.61\\platina-log-exp-frenteverso-c368",
     "Expedição - Preto": "\\\\192.0.0.61\\platina-log-exp-preto-c368",
