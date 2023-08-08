@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Impressoras - Masterline</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Impressoras - Masterline</h1>
+    <div id="impressoras">
+        
+        <div class="mln_administrativo_impressora">
+            <h2>Administrativo</h2> 
+            <img src="{{ url_for('static', filename='images/mln_adm.jpg') }}" alt=""></h2>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN ADM - Preto</p>
+                <span class="user-friendly-name">Preto</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN ADM - Colorida</p>
+                <span class="user-friendly-name">Colorida</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN ADM - A3</p>
+                <span class="user-friendly-name">A3</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN ADM - Frente e Verso</p>
+                <span class="user-friendly-name">Frente e Verso</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN ADM - Grosso</p>
+                <span class="user-friendly-name">Grosso</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN ADM - Rascunho</p>
+                <span class="user-friendly-name">Rascunho</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </div>
+        
+
+            <!-- Home button -->
+        <a href="{{ url_for('index') }}" class="home-button">Home</a>
+    </div> <!-- Close the impressoras container -->
+
+        <!-- Reference the impressoras.js script -->
+    <script src="{{ url_for('static', filename='impressoras.js') }}"></script>
+
+</body>
+</html>

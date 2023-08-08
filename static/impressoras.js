@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   for (let button of btnAdicionar) {
     button.addEventListener('click', function() {
-      let printerName = this.previousElementSibling.innerText.trim();
+      let printerName = this.closest('.impressora').querySelector('.printer-name').innerText.trim();
 
       // Make a POST request to the Python server to add the printer
       fetch('/addPrinter', {

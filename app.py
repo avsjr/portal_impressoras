@@ -64,7 +64,12 @@ platina_log_printers = {
 }
 
 masterline_main_printers = {
-    
+    "MLN ADM - A3": "\\\\192.0.0.61\\mln-adm-a3-mpc3503",
+    "MLN ADM - Colorida": "\\\\192.0.0.61\\mln-adm-colorida-mpc3503",
+    "MLN ADM - Frente e Verso": "\\\\192.0.0.61\\mln-adm-frenteverso-mpc3503",
+    "MLN ADM - Grosso": "\\\\192.0.0.61\\mln-adm-grosso-mpc3503",
+    "MLN ADM - Preto": "\\\\192.0.0.61\\mln-adm-preto-mpc3503",
+    "MLN ADM - Rascunho": "\\\\192.0.0.61\\mln-adm-rascunho-mpc3503"    
 }
 
 masterline_log_printers = {
