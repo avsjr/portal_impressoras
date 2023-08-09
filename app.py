@@ -69,18 +69,44 @@ masterline_main_printers = {
     "MLN ADM - Frente e Verso": "\\\\192.0.0.61\\mln-adm-frenteverso-mpc3503",
     "MLN ADM - Grosso": "\\\\192.0.0.61\\mln-adm-grosso-mpc3503",
     "MLN ADM - Preto": "\\\\192.0.0.61\\mln-adm-preto-mpc3503",
-    "MLN ADM - Rascunho": "\\\\192.0.0.61\\mln-adm-rascunho-mpc3503"    
+    "MLN ADM - Rascunho": "\\\\192.0.0.61\\mln-adm-rascunho-mpc3503",
+    "MLN ALMOX PIG - Sankhya": "\\\\192.0.0.61\\mln-almoxpigmento-sankhya-zebrazm400",
+    "MLN ALMOX QUIM - Etiqueta": "\\\\192.0.0.61\\mln-almoxquimica-etiquetas-zebrazm400",
+    "MLN ALMOX QUIM - Frente e Verso": "\\\\192.0.0.61\\mln-almoxquimica-frenteverso-brother8157",
+    "MLN ALMOX QUIM - Preto": "\\\\192.0.0.61\\mln-almoxquimica-preto-brother8157",
+    "MLN ALMOX QUIM - Rascunho": "\\\\192.0.0.61\\mln-almoxquimica-rascunho-brother8157",
+    "MLN ALMOX ROT - Preto": "\\\\192.0.0.61\\mln-almoxrotulos-preto-hpp1102w",
+    "MLN ALMOX ROT - Sankhya": "\\\\192.0.0.61\\mln-almoxrotulos-sankhya-zebrazt410",
+    "MLN AMB - Frente e Verso": "\\\\192.0.0.61\\mln-ambulatorio-frenteverso-sp5210sf",
+    "MLN AMB - Preto": "\\\\192.0.0.61\\mln-ambulatorio-preto-sp5210sf",
+    "MLN DP - Colorida": "\\\\192.0.0.61\\mln-dp-colorida-mpc3003",
+    "MLN DP - Frente e Verso": "\\\\192.0.0.61\\mln-dp-frenteverso-mpc3003",
+    "MLN DP - Preto": "\\\\192.0.0.61\\mln-dp-preto-mpc3003",
+    "MLN DP - Rascunho": "\\\\192.0.0.61\\mln-dp-rascunho-mpc3003",
+    "MLN ENV - Preto": "\\\\192.0.0.61\\mln-envase-preto-sp5200s",
+    "MLN - Corpore01": "\\\\192.0.0.61\\mln-etiquetas-corpore01-zebrazt410",
+    "MLN - Corpore02": "\\\\192.0.0.61\\mln-etiquetas-corpore02-zebrazt410",
+    "MLN - Corpore03": "\\\\192.0.0.61\\mln-etiquetas-corpore03-zebrazt410",
+    "MLN - Corpore05": "\\\\192.0.0.61\\mln-etiquetas-corporeO5-zebrazt411",
+    "MLN - Corpore06": "\\\\192.0.0.61\\mln-etiquetas-corpore06-zebrazt411",
+    "MLN - Corpore07": "\\\\192.0.0.61\\mln-etiquetas-corpore07-zebrazt411",
+    "MLN Fisicoquimico - Sankhya": "\\\\192.0.0.61\\mln-fisicoquimico-sankhyal-zebrazt411"
 }
 
 masterline_log_printers = {
-    
-}
-
-masterline_flexo_printers = {
-    
+    "MLN LOG - Frente e Verso": "\\\\192.0.0.61\\mln-log-estoque-frenteverso-sp5210sf",
+    "MLN LOG - Preto": "\\\\192.0.0.61\\mln-log-estoque-preto-sp5210sf",
+    "MLN LOG - Rascunho": "\\\\192.0.0.61\\mln-log-estoque-rascunho-sp5210sf",
+    "MLN LOG - Sankhya": "\\\\192.0.0.61\\mln-log-estoque-sankhya-gk420t"
 }
 
 masterline_emb_printers = {
+    "MLN EMB - Sankhya": "\\\\192.0.0.61\\mln-emabalagem-sankhya-zebrazm400",
+    "MLN EMB - Frente e Verso": "\\\\192.0.0.61\\mln-embalagem-frenteverso-sp5200s",
+    "MLN EMB - Preto": "\\\\192.0.0.61\\mln-embalagem-preto-sp5200s",
+}
+
+masterline_flexo_printers = {
     
 }
 
