@@ -9,38 +9,6 @@
     <h1>Impressoras - Platina Log</h1>
     <div id="impressoras">
 
-        <!-- Administrativo -->
-<div class="log_administrativo_impressora">
-    <h2>Administrativo</h2> 
-    <img src="{{ url_for('static', filename='images/pl_log_adm.jpg') }}" alt="">
-    <div class="impressora">
-        <p class="printer-name visually-hidden">LOG ADM - Preto</p>
-        <span class="user-friendly-name">Preto</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    <div class="impressora">
-        <p class="printer-name visually-hidden">LOG ADM - Frente e Verso</p>
-        <span class="user-friendly-name">Frente e Verso</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    <div class="impressora">
-        <p class="printer-name visually-hidden">LOG ADM - Rascunho</p>
-        <span class="user-friendly-name">Rascunho</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-</div>
-
-<!-- Ambulatório -->
-<div class="ambulatorio_impressora">
-    <h2>Ambulatório</h2> 
-    <img class="printer-logo" src="{{ url_for('static', filename='images/pl_log_ambulatorio.jpg') }}" alt="">
-    <div class="impressora">
-        <p class="printer-name visually-hidden">Ambulatório</p>
-        <span class="user-friendly-name"></span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-</div>  
-
 <!-- Expedição -->
 <div class="expedicao_impressora">
     <h2>Expedição</h2> 
@@ -70,13 +38,23 @@
     </div>
 </div>
 
-<!-- Recebimento -->
-<div class="recebimento_impressora">
-    <h2>Recebimento</h2> 
-    <img class="printer-logo" src="{{ url_for('static', filename='images/pl_log_rec_zebra.jpg') }}" alt="">
+<!-- Administrativo -->
+<div class="log_administrativo_impressora">
+    <h2>Administrativo</h2> 
+    <img src="{{ url_for('static', filename='images/pl_log_adm.jpg') }}" alt="">
     <div class="impressora">
-        <p class="printer-name visually-hidden">Recebimento</p>
-        <span class="user-friendly-name"></span>
+        <p class="printer-name visually-hidden">LOG ADM - Preto</p>
+        <span class="user-friendly-name">Preto</span>
+        <button class="btn-adicionar">Adicionar</button>
+    </div>
+    <div class="impressora">
+        <p class="printer-name visually-hidden">LOG ADM - Frente e Verso</p>
+        <span class="user-friendly-name">Frente e Verso</span>
+        <button class="btn-adicionar">Adicionar</button>
+    </div>
+    <div class="impressora">
+        <p class="printer-name visually-hidden">LOG ADM - Rascunho</p>
+        <span class="user-friendly-name">Rascunho</span>
         <button class="btn-adicionar">Adicionar</button>
     </div>
 </div>
@@ -102,8 +80,29 @@
     </div>
 </div>
 
+<!-- Ambulatório -->
+<div class="ambulatorio_impressora">
+    <h2>Ambulatório</h2> 
+    <img class="printer-logo" src="{{ url_for('static', filename='images/pl_log_ambulatorio.jpg') }}" alt="">
+    <div class="impressora">
+        <p class="printer-name visually-hidden">Ambulatório</p>
+        <span class="user-friendly-name">Preto</span>
+        <button class="btn-adicionar">Adicionar</button>
+    </div>
+</div>  
 
-            <!-- Home button -->
+<!-- Recebimento -->
+<div class="recebimento_impressora">
+    <h2>Recebimento</h2> 
+    <img class="printer-logo" src="{{ url_for('static', filename='images/pl_log_rec_zebra.jpg') }}" alt="">
+    <div class="impressora">
+        <p class="printer-name visually-hidden">Recebimento</p>
+        <span class="user-friendly-name">Etiqueta</span>
+        <button class="btn-adicionar">Adicionar</button>
+    </div>
+</div>
+
+        <!-- Home button -->
         <a href="{{ url_for('index') }}" class="home-button">Home</a>
     </div> <!-- Close the impressoras container -->
 

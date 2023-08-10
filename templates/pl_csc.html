@@ -8,7 +8,33 @@
 <body>
     <h1>Impressoras - Escritório Platina CSC</h1>
     <div id="impressoras">
-        
+
+<!-- Marketing-->
+<div class="marketing_impressora">
+    <h2>Marketing</h2> 
+    <img class="printer-logo" src="{{ url_for('static', filename='images/csc_marketing.jpg') }}" alt="Marketing Logo">
+    <div class="impressora">
+        <p class="printer-name visually-hidden">Marketing - Colorido</p>
+        <span class="user-friendly-name">Colorido</span>
+        <button class="btn-adicionar">Adicionar</button>
+    </div>
+    <div class="impressora">
+        <p class="printer-name visually-hidden">Marketing - Preto</p>
+        <span class="user-friendly-name">Preto</span>
+        <button class="btn-adicionar">Adicionar</button>
+    </div>
+    <div class="impressora">
+        <p class="printer-name visually-hidden">Marketing - A3</p>
+        <span class="user-friendly-name">A3</span>
+        <button class="btn-adicionar">Adicionar</button>
+    </div>
+    <div class="impressora">
+        <p class="printer-name visually-hidden">Marketing - Frente e Verso</p>
+        <span class="user-friendly-name">Frente e Verso</span>
+        <button class="btn-adicionar">Adicionar</button>
+    </div>
+</div>        
+
 <!-- Administrativo -->
 <div class="csc_administrativo_impressora">
     <h2>Administrativo</h2> 
@@ -66,34 +92,7 @@
         <button class="btn-adicionar">Adicionar</button>
     </div>
 </div>
-
-<!-- Marketing-->
-<div class="marketing_impressora">
-    <h2>Marketing</h2> 
-    <img class="printer-logo" src="{{ url_for('static', filename='images/csc_marketing.jpg') }}" alt="Marketing Logo">
-    <div class="impressora">
-        <p class="printer-name visually-hidden">Marketing - Colorido</p>
-        <span class="user-friendly-name">Colorido</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    <div class="impressora">
-        <p class="printer-name visually-hidden">Marketing - Preto</p>
-        <span class="user-friendly-name">Preto</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    <div class="impressora">
-        <p class="printer-name visually-hidden">Marketing - A3</p>
-        <span class="user-friendly-name">A3</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    <div class="impressora">
-        <p class="printer-name visually-hidden">Marketing - Frente e Verso</p>
-        <span class="user-friendly-name">Frente e Verso</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
 </div>
-
-    </div>
 
         <!-- Home button -->
         <a href="{{ url_for('index') }}" class="home-button">Home</a>

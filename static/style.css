@@ -17,8 +17,22 @@ h1 {
     align-items: center;
     margin: 10px;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #0a0a0a; /* Indigo color */
+}
+
+h2 {
+    
+/*    left: 50%; /* Center horizontally */
+/*    transform: translateX(-50%); /* Adjust centering */
+    text-align: center; /* Centraliza o texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px; 
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #0a0a0a;
 }
 
 /* Add a new CSS rule for visually hidden content */
@@ -36,7 +50,7 @@ h1 {
 
 /* Style the user-friendly printer name */
 .user-friendly-name {
-    font-size: 17px;
+    font-size: 14px;
     margin: auto;
     text-align: center;
     color: #343a40; /* Dark gray color */
@@ -107,11 +121,11 @@ h1 {
 .exportacao_impressora img,
 .comercial_impressora img,
 .marketing_impressora img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border: 1px solid #ccc;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 .csc_administrativo_impressora p,
 .exportacao_impressora p,
@@ -141,11 +155,11 @@ h1 {
 .expedicao_impressora img,
 .recebimento_impressora img,
 .seguranca_impressora img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border: 1px solid #ccc;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 .log_administrativo_impressora p,
 .ambulatorio_impressora p,
@@ -159,7 +173,14 @@ h1 {
 }
 
 /* Estilos mln_main */
-.mln_administrativo_impressora {
+.mln_administrativo_impressora,
+.mln_almoxarifado_impressora,
+.mln_almoxarifado_rotulo_impressora,
+.mln_almoxarifado_pigmento_impressora,
+.mln_almoxarifado_dp_impressora,
+.mln_almoxarifado_envase_impressora,
+.mln_corpore_impressora,
+.mln_fisicoquimico {
     font-size: 15px;
     display: flex;
     flex-direction: column;
@@ -168,15 +189,29 @@ h1 {
     margin: 10px;
 }
 
-.mln_administrativo_impressora img {
-    width: 80px;
-    height: 80px;
+.mln_administrativo_impressora img,
+.mln_almoxarifado_impressora img,
+.mln_almoxarifado_rotulo_impressora img,
+.mln_almoxarifado_pigmento_impressora img,
+.mln_almoxarifado_dp_impressora img,
+.mln_almoxarifado_envase_impressora img,
+.mln_corpore_impressora img,
+.mln_fisicoquimico img {
+    width: 60px;
+    height: 60px;
     border: 1px solid #ccc;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
-.mln_administrativo_impressora p {
+.mln_administrativo_impressora p,
+.mln_almoxarifado_impressora p,
+.mln_almoxarifado_rotulo_impressora p,
+.mln_almoxarifado_pigmento_impressora p,
+.mln_almoxarifado_dp_impressora p,
+.mln_almoxarifado_envase_impressora p,
+.mln_corpore_impressora p,
+.mln_fisicoquimico p {
     font-size: 17px;
     margin: auto;
     text-align: center;
@@ -188,12 +223,12 @@ h1 {
     position: fixed;
     top: 30px;
     left: 30px;
-    padding: 10px 20px;
+    padding: 8px 16px;
     background-color: #007bff; /* Blue color */
     color: #fff; /* White color */
     border: none;
     border-radius: 4px;
-    font-size: 15px;
+    font-size: 13px;
     cursor: pointer;
 }
 
@@ -203,8 +238,9 @@ h1 {
 
 /* Estilos Botão Adicionar */
 .btn-adicionar {
+    font-size: 12px;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 4px 8px;
     background-color: #007bff;
     color: #fff;
     border: none;
