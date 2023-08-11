@@ -44,6 +44,42 @@
                 <button class="btn-adicionar">Adicionar</button>
             </div>
         </div>
+
+        <!-- PED -->
+        <div class="mln_ped_impressora">
+            <h2>PED</h2> 
+            <img src="{{ url_for('static', filename='images/mln_ped.jpg') }}" alt=""></h2>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN PED - Preto</p>
+                <span class="user-friendly-name">Preto</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN PED - Colorida</p>
+                <span class="user-friendly-name">Colorida</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN PED - A3</p>
+                <span class="user-friendly-name">A3</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN PED - Frente e Verso</p>
+                <span class="user-friendly-name">Frente e Verso</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN PED - Etiqueta</p>
+                <span class="user-friendly-name">Etiqueta</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN PED - Rascunho</p>
+                <span class="user-friendly-name">Rascunho</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </div>
         
         <!-- Corpore -->
         <div class="mln_corpore_impressora">
@@ -82,7 +118,7 @@
         </div>
 
         <!-- Departamento Pessoal -->
-        <div class="mln_almoxarifado_dp_impressora">
+        <div class="mln_dp_impressora">
             <h2>Departamento Pessoal</h2>
             <img class="printer-logo" src="{{ url_for('static', filename='images/mln_dp.jpg') }}" alt="">
             <div class="impressora">
@@ -103,6 +139,59 @@
             <div class="impressora">
                 <p class="printer-name visually-hidden">MLN DP - Rascunho</p>
                 <span class="user-friendly-name">Rascunho</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </div>
+
+        <!-- Manutenção -->
+        <div class="mln_manut_impressora">
+            <h2>Manutenção</h2> 
+            <img src="{{ url_for('static', filename='images/mln_manut.jpg') }}" alt=""></h2>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN MAN - Preto</p>
+                <span class="user-friendly-name">Preto</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN MAN - Frente e Verso</p>
+                <span class="user-friendly-name">Frente e Verso</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN MAN - Rascunho</p>
+                <span class="user-friendly-name">Rascunho</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </div>
+
+        <!-- Ambulatório -->
+        <div class="mln_amb_impressora">
+            <h2>Ambulatório</h2>
+            <img class="printer-logo" src="{{ url_for('static', filename='images/mln_amb.jpg') }}" alt="">
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN AMB - Preto</p>
+                <span class="user-friendly-name">Preto</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN AMB - Frente e Verso</p>
+                <span class="user-friendly-name">Frente e Verso</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </div>
+
+        <!-- Pesagem -->
+        <div class="mln_pes_impressora">
+            <h2>Pesagem</h2>
+            <img class="printer-logo" src="{{ url_for('static', filename='images/mln_pesagem.jpg') }}" alt="">
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN PES - Sankhya01</p>
+                <span class="user-friendly-name">Sankhya</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+            <div class="impressora">
+                <p class="printer-name visually-hidden">MLN PES - Sankhya02</p>
+                <span class="user-friendly-name">Sankhya</span>
                 <button class="btn-adicionar">Adicionar</button>
             </div>
         </div>
@@ -163,24 +252,8 @@
             </div>
         </div>
 
-        <!-- Ambulatório -->
-        <div class="mln_almoxarifado_rotulo_impressora">
-            <h2>Ambulatório</h2>
-            <img class="printer-logo" src="{{ url_for('static', filename='images/mln_amb.jpg') }}" alt="">
-            <div class="impressora">
-                <p class="printer-name visually-hidden">MLN AMB - Preto</p>
-                <span class="user-friendly-name">Preto</span>
-                <button class="btn-adicionar">Adicionar</button>
-            </div>
-            <div class="impressora">
-                <p class="printer-name visually-hidden">MLN AMB - Frente e Verso</p>
-                <span class="user-friendly-name">Frente e Verso</span>
-                <button class="btn-adicionar">Adicionar</button>
-            </div>
-        </div>
-
         <!-- Envase -->
-        <div class="mln_almoxarifado_envase_impressora">
+        <div class="mln_envase_impressora">
             <h2>Envase</h2>
             <img class="printer-logo" src="{{ url_for('static', filename='images/mln_env.jpg') }}" alt="">
             <div class="impressora">

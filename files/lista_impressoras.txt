@@ -90,11 +90,6 @@ Marketing - Preto endereço: \\192.0.0.61\esc-mkt-preto-c368
 \\\\192.0.0.61\\mln-log-estoque-rascunho-sp5210sf
 \\\\192.0.0.61\\mln-log-estoque-sankhya-gk420t
 
-
-
-
-
-
 ---NÃO INSERIDAS, PRECISA REVISAR
 
 Financeiro endereço: \\192.0.0.61\csc-financeiro-1102w

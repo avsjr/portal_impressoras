@@ -177,26 +177,34 @@ h2 {
 .mln_almoxarifado_impressora,
 .mln_almoxarifado_rotulo_impressora,
 .mln_almoxarifado_pigmento_impressora,
-.mln_almoxarifado_dp_impressora,
-.mln_almoxarifado_envase_impressora,
+.mln_dp_impressora,
+.mln_envase_impressora,
 .mln_corpore_impressora,
-.mln_fisicoquimico {
+.mln_fisicoquimico,
+.mln_ped_impressora,
+.mln_manut_impressora,
+.mln_pes_impressora,
+.mln_amb_impressora {
     font-size: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(20% - 10px); /* Adjust width and margin as needed */
-    margin: 10px;
+    width: calc(20% - 20px); /* Adjust width and margin as needed */
+    margin: 10px auto; /* Set auto margin for left and right */
 }
 
 .mln_administrativo_impressora img,
 .mln_almoxarifado_impressora img,
 .mln_almoxarifado_rotulo_impressora img,
 .mln_almoxarifado_pigmento_impressora img,
-.mln_almoxarifado_dp_impressora img,
-.mln_almoxarifado_envase_impressora img,
+.mln_dp_impressora img,
+.mln_envase_impressora img,
 .mln_corpore_impressora img,
-.mln_fisicoquimico img {
+.mln_fisicoquimico img,
+.mln_ped_impressora img,
+.mln_manut_impressora img,
+.mln_pes_impressora img,
+.mln_amb_impressora img {
     width: 60px;
     height: 60px;
     border: 1px solid #ccc;
@@ -208,10 +216,14 @@ h2 {
 .mln_almoxarifado_impressora p,
 .mln_almoxarifado_rotulo_impressora p,
 .mln_almoxarifado_pigmento_impressora p,
-.mln_almoxarifado_dp_impressora p,
-.mln_almoxarifado_envase_impressora p,
+.mln_dp_impressora p,
+.mln_envase_impressora p,
 .mln_corpore_impressora p,
-.mln_fisicoquimico p {
+.mln_fisicoquimico p,
+.mln_ped_impressora p,
+.mln_manut_impressora p,
+.mln_pes_impressora p,
+.mln_amb_impressora p {
     font-size: 17px;
     margin: auto;
     text-align: center;

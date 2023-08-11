@@ -90,7 +90,18 @@ masterline_main_printers = {
     "MLN - Corpore05": "\\\\192.0.0.61\\mln-etiquetas-corporeO5-zebrazt411",
     "MLN - Corpore06": "\\\\192.0.0.61\\mln-etiquetas-corpore06-zebrazt411",
     "MLN - Corpore07": "\\\\192.0.0.61\\mln-etiquetas-corpore07-zebrazt411",
-    "MLN Fisicoquimico - Sankhya": "\\\\192.0.0.61\\mln-fisicoquimico-sankhyal-zebrazt411"
+    "MLN Fisicoquimico - Sankhya": "\\\\192.0.0.61\\mln-fisicoquimico-sankhyal-zebrazt411",
+    "MLN MAN - Frente e Verso": "\\\\192.0.0.61\\mln-manutencao-frenteverso-sp5210sf",
+    "MLN MAN - Preto": "\\\\192.0.0.61\\mln-manutencao-preto-sp5210sf",
+    "MLN MAN - Rascunho": "\\\\192.0.0.61\\mln-manutencao-rascunho-sp5210sf",
+    "MLN PED - A3": "\\\\192.0.0.61\\mln-ped-a3-mpc3003",
+    "MLN PED - Colorida": "\\\\192.0.0.61\\mln-ped-colorida-mpc3003",
+    "MLN PED - Etiquetas": "\\\\192.0.0.61\\mln-ped-etiquetas-mpc3003",
+    "MLN PED - Preto": "\\\\192.0.0.61\\mln-ped-preto-mpc3003",
+    "MLN PED - Frente e Verso": "\\\\192.0.0.61\\mln-dp-fernteverso-sp5200s",
+    "MLN PED - Rascunho": "\\\\192.0.0.61\\mln-ped-rascunho-mpc3003",
+    "MLN PES - Sankhya01": "\\\\192.0.0.61\\mln-pesagem-sankhya-zebras4m",
+    "MLN PES - Sankhya02": "\\\\192.0.0.61\\mln-pesagem-sankhya-zebrazt410"
 }
 
 masterline_log_printers = {
