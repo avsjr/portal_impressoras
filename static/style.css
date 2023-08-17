@@ -4,14 +4,14 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif, Verdana, Tahoma; 
+    font-family: 'Poppins', sans-serif;
 }
 
 h1 {
-    position: absolute; /* or 'relative' based on your needs */
-    top: 0; /* Align at the top */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust centering */
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +22,6 @@ h1 {
 }
 
 h2 {
-    
 /*    left: 50%; /* Center horizontally */
 /*    transform: translateX(-50%); /* Adjust centering */
     text-align: center; /* Centraliza o texto */
@@ -75,8 +74,8 @@ h2 {
 
 .platina img,
 .masterline img {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     border: 2px solid #ccc;
     border-radius: 50%;
     margin-bottom: 10px;
@@ -115,7 +114,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     width: calc(25% - 20px); /* Adjust width and margin as needed */
-    margin: 10px;
+    margin: 0px;
+    text-align: center;
 }
 .csc_administrativo_impressora img,
 .exportacao_impressora img,
@@ -135,6 +135,61 @@ h2 {
     margin: auto;
     text-align: center;
     color: #343a40; 
+}
+
+.csc_administrativo_impressora .row1,
+.marketing_impressora .row0 {
+    margin-left: 0px;
+    margin-bottom: 0px;
+    border-color: #0a0c03; /* Add your desired background color */
+    border-style: solid;
+    padding: 10px; /* Add padding to the row for spacing */
+    border-radius: 0px; /* Add border radius for rounded corners */
+    
+}
+
+.marketing_impressora .row1{
+    border-style: solid;
+    border-color: #0a0c03; /* Add your desired background color */
+}
+
+.marketing_impressora .row2{
+    border-style: solid;
+    border-color: #0a0c03; /* Add your desired background color */
+}
+
+.marketing_impressora .row3{
+    border-style: solid;
+    border-color: #0a0c03; /* Add your desired background color */
+}
+
+.marketing_impressora .row4{
+    border-style: solid;
+    border-color: #0a0c03; /* Add your desired background color */
+}
+
+.marketing_impressora .row5{
+    border-style: solid;
+    border-color: #0a0c03; /* Add your desired background color */
+}
+.marketing_impressora .row6{
+    border-style: solid;
+    border-color: #0a0c03; /* Add your desired background color */
+}
+
+.marketing_impressora .row7{
+    border-style: solid;
+    border-color: #0a0c03; /* Add your desired background color */
+}
+
+.marketing_impressora .row8{
+    border-style: solid;
+    border-color: #0a0c03; /* Add your desired background color */
+}
+
+.marketing_impressora .row9{
+    border-style: solid;
+    border-color: #0a0c03; /* Add your desired background color */
 }
 
 /* Estilos pl_log */
@@ -189,8 +244,8 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(20% - 20px); /* Adjust width and margin as needed */
-    margin: 10px auto; /* Set auto margin for left and right */
+    width: calc(8,33% - 10px); /* Adjust width and margin as needed */
+    margin: 20px auto; /* Set auto margin for left and right */
 }
 
 .mln_administrativo_impressora img,
@@ -234,18 +289,23 @@ h2 {
 .home-button {
     position: fixed;
     top: 30px;
-    left: 30px;
-    padding: 8px 16px;
-    background-color: #007bff; /* Blue color */
-    color: #fff; /* White color */
+    left: 10%;
+    /*transform: translateX(-50%);*/
+    padding: 0;
     border: none;
-    border-radius: 4px;
-    font-size: 13px;
     cursor: pointer;
+    background-color: transparent; /* No background color */
 }
 
-.home-button:hover {
-    background-color: #0056b3; /* Darker blue color on hover */
+.home-button img {
+    width: 190px;
+    height: 30px;
+    display: block; /* Remove any inline-level spacing */
+}
+
+.home-button img:hover {
+    opacity: 0.8;
+    outline: none; /* Remove the blue outline on focus */
 }
 
 /* Estilos Botão Adicionar */
@@ -253,12 +313,44 @@ h2 {
     font-size: 12px;
     cursor: pointer;
     padding: 4px 8px;
-    background-color: #007bff;
+    background-color: #1b5e20; /* Dark green color */
     color: #fff;
     border: none;
     border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .btn-adicionar:hover {
-    background-color: #0056b3;
+    background-color: #114915; /* Darker green color on hover */
 }
+
+/* Estilos Botão pagina inicial */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-link {
+    display: block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    height: 40px; /* Altura fixa para todos os botões */
+    width: 100%; /* Largura fixa para todos os botões */
+}
+
+.button-link:hover {
+    background-color: #222;
+}
+
+
+

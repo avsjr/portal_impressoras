@@ -6,28 +6,25 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Localidades do Grupo SKALA</h1>
+    <h1>Portal de Mapeamento de Impressoras</h1>
+    <h2>Selecione a localidade</h2>
     <div id="localidade">
         <div class="platina">
             <img src="{{ url_for('static', filename='images/logo_platina.jpg') }}" alt="Platina CSC">
-            <a href="/pl_csc">
-            <p>Platina CSC</p>
-            <a href="/pl_log">
-            <p>Platina LOG</p>
-            </a>
+        <div class="button-container">
+            <button class="button-link" onclick="window.location.href='/pl_csc'">Platina CSC</button>
+            <button class="button-link" onclick="window.location.href='/pl_log'">Platina LOG</button>
+        </div>
         </div>
 
         <div class="masterline">
             <img src="{{ url_for('static', filename='images/logo_masterline.jpg') }}" alt="Masterline">
-            <a href="/ml_main">
-            <p>Masterline</p>
-            <a href="/ml_log">
-            <p>Masterline LOG</p>
-            <a href="/ml_flexo">
-            <p>Flexografia</p>
-            <a href="/ml_emb">
-            <p>Embalagens</p>
-            </a>
+        <div class="button-container">
+            <button class="button-link" onclick="window.location.href='/ml_main'">Masterline</button>
+            <button class="button-link" onclick="window.location.href='/ml_log'">Masterline LOG</button>
+            <button class="button-link" onclick="window.location.href='/ml_flexo'">Flexografia</button>
+            <button class="button-link" onclick="window.location.href='/ml_emb'">Embalagens</button>
+        </div>
         </div>                
 </body>
 </html>

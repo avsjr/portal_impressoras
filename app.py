@@ -1,6 +1,5 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 import subprocess
-import os
 
 app = Flask(__name__, static_url_path='', static_folder='static')
 
@@ -20,18 +19,57 @@ def add_printer():
 
     if caminho_impressora is None:
         return jsonify({'message': 'Printer not found.'}), 404
+    
+    # Comando PowerShell para obter os membros do grupo Administrators
+    powershell_command = r'Get-LocalGroupMember -Group "Administradores"'
 
+      
+    # Executa o comando PowerShell
+    result = subprocess.run(['powershell', '-Command', powershell_command], capture_output=True, text=True, shell=True) 
+
+        
+    #Verifica a saída do comando
+    if result.returncode == 0:
+        output_lines = result.stdout.strip().split('\n')
+        second_line_parts = output_lines[3].split()
+        admin_user = second_line_parts[2]  # Obtém o nome do segundo usuário
+        print(f"Nome do segundo usuário administrador: {admin_user_name}")
+    else:
+        print("Ocorreu um erro ao obter os membros do grupo Administrators:")
+        print(result.stderr)
+        
+    # Nome de usuário e senha do administrador
+    admin_user_name = admin_user
+    admin_pass = "sasquasth" # Senha do usuário administrador    
+
+    print(f"Trying to add printer: {caminho_impressora}")
+    
+    # PowerShell command para adicionar a impressora usando Start-Process com -Credential
+    powershell_command = (
+    f'Start-Process powershell -Credential (New-Object System.Management.Automation.PSCredential'
+    f'("{admin_user_name}", (ConvertTo-SecureString -String "{admin_pass}" -AsPlainText -Force)))'
+    f' -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command '
+    #(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("\\Printserver01\Xerox5")
+    f'(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\\"{caminho_impressora}\\")"'
+)
+
+    print("PowerShell command executed")
+    
     try:
-        # Execute PowerShell script to add printer
-        script = f'(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("{caminho_impressora}")'
-        result = subprocess.run(['powershell', '-Command', script], capture_output=True, text=True, check=True)
-        print(result.stdout)  # Print the output of the PowerShell script
-        return jsonify({'message': 'Printer added successfully'}), 200
-    except subprocess.CalledProcessError as e:
-        print(e.stderr)  # Print any error message from the PowerShell script
-        return jsonify({'message': 'Failed to add printer.'}), 500
+        # Execute o script PowerShell com privilégios elevados
+        result = subprocess.run(['powershell', '-Command', powershell_command], capture_output=True, text=True, shell=True)
+        print("PowerShell script executed")
+        # Exibir a saída do script PowerShell
+        print(result.stdout)
 
-           
+        # Retornar a mensagem de resposta
+        return jsonify({'message': 'Impressora adicionada com sucesso'}), 200
+
+    except subprocess.CalledProcessError as e:
+        # Exibir qualquer mensagem de erro do script PowerShell
+        print(e.stderr)
+        return jsonify({'message': 'Falha ao adicionar a impressora'}), 500
+
 # Define printer data for each office
 platina_csc_printers = {
     "CSC ADM - Frente e Verso": "\\\\192.0.0.61\\csc-adm-frenteverso-sp5200s",

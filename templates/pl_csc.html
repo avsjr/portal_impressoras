@@ -11,27 +11,47 @@
 
 <!-- Marketing-->
 <div class="marketing_impressora">
-    <h2>Marketing</h2> 
-    <img class="printer-logo" src="{{ url_for('static', filename='images/csc_marketing.jpg') }}" alt="Marketing Logo">
+    <div class="row0">
+        <h2>Marketing</h2>
+    </div>
+    <div class="row1">
+        <img class="printer-logo" src="{{ url_for('static', filename='images/csc_marketing.jpg') }}" alt="Marketing Logo">
+    </div>
     <div class="impressora">
+    <div class="row2">
         <p class="printer-name visually-hidden">Marketing - Colorido</p>
         <span class="user-friendly-name">Colorido</span>
+    </div>
+    <div class="row3">    
         <button class="btn-adicionar">Adicionar</button>
     </div>
+    </div>
     <div class="impressora">
+    <div class="row4">
         <p class="printer-name visually-hidden">Marketing - Preto</p>
         <span class="user-friendly-name">Preto</span>
+    </div>
+    <div class="row5">
         <button class="btn-adicionar">Adicionar</button>
     </div>
+    </div>
     <div class="impressora">
+    <div class="row6">
         <p class="printer-name visually-hidden">Marketing - A3</p>
         <span class="user-friendly-name">A3</span>
+    </div>
+    <div class="row7">
         <button class="btn-adicionar">Adicionar</button>
     </div>
+    </div>
     <div class="impressora">
+    <div class="row8">
         <p class="printer-name visually-hidden">Marketing - Frente e Verso</p>
         <span class="user-friendly-name">Frente e Verso</span>
+    </div>
+    <div class="row9">
         <button class="btn-adicionar">Adicionar</button>
+    </div>
     </div>
 </div>        
 
@@ -95,7 +115,9 @@
 </div>
 
         <!-- Home button -->
-        <a href="{{ url_for('index') }}" class="home-button">Home</a>
+        <a href="{{ url_for('index') }}" class="home-button">
+            <img src="{{ url_for('static', filename='images/logo-skala-vegano.png') }}" alt="Home Icon">
+        </a>
 
     <!-- Reference the impressoras.js script -->
     <script src="{{ url_for('static', filename='impressoras.js') }}"></script>

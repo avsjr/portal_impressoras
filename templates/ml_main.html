@@ -232,7 +232,7 @@
                 <span class="user-friendly-name">Sankhya</span>
                 <button class="btn-adicionar">Adicionar</button>
             </div>
-            <h2>Almoxarifado Pigmento</h2>
+            <!--<h2>Almoxarifado Pigmento</h2>-->
             <img class="printer-logo" src="{{ url_for('static', filename='images/mln_almox_rot_preta.jpg') }}" alt="">
             <div class="impressora">
                 <p class="printer-name visually-hidden">MLN ALMOX ROT - Preto</p>
@@ -276,7 +276,10 @@
     </div>
 
         <!-- Home button -->
-        <a href="{{ url_for('index') }}" class="home-button">Home</a>
+        <a href="{{ url_for('index') }}" class="home-button">
+            <img src="{{ url_for('static', filename='images/logo-skala-vegano.png') }}" alt="Home Icon">
+        </a>
+
     </div> <!-- Close the impressoras container -->
 
         <!-- Reference the impressoras.js script -->

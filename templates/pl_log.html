@@ -103,7 +103,10 @@
 </div>
 
         <!-- Home button -->
-        <a href="{{ url_for('index') }}" class="home-button">Home</a>
+        <a href="{{ url_for('index') }}" class="home-button">
+            <img src="{{ url_for('static', filename='images/logo-skala-vegano.png') }}" alt="Home Icon">
+        </a>
+
     </div> <!-- Close the impressoras container -->
 
         <!-- Reference the impressoras.js script -->
