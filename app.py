@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, render_template, request
 import subprocess
+import win32print
 
 app = Flask(__name__, static_url_path='', static_folder='static')
 
@@ -18,59 +19,36 @@ def add_printer():
             break
 
     if caminho_impressora is None:
-        return jsonify({'message': 'Printer not found.'}), 404
+        return jsonify({'message': 'Printer not found'}), 404
+
+    # Run the 'net localgroup' command to get the members of the Administrators group
+    command = 'net localgroup Administradores'
+    result = subprocess.run(command, capture_output=True, text=True, shell=True)
     
-    # Comando PowerShell para obter os membros do grupo Administrators
-    powershell_command = r'Get-LocalGroupMember -Group "Administradores"'
-
-      
-    # Executa o comando PowerShell
-    result = subprocess.run(['powershell', '-Command', powershell_command], capture_output=True, text=True, shell=True) 
-
-        
-    #Verifica a saída do comando
+    # Check the exit code to determine if the command was successful
     if result.returncode == 0:
         output_lines = result.stdout.strip().split('\n')
-        second_line_parts = output_lines[3].split()
-        admin_user = second_line_parts[2]  # Obtém o nome do segundo usuário
-        print(f"Nome do segundo usuário administrador: {admin_user}")
+        # Get the eigth line (index 1) and split it into parts
+        eigth_line_parts = output_lines[7].split()
+        # Extract the username from the parts (assuming it's the third element)
+        admin_user_name = eigth_line_parts[0]
+        admin_pass = "sasquasth"  # Senha do usuário administrador
+        print(f"Admin user name: {admin_user_name}")
     else:
-        print("Ocorreu um erro ao obter os membros do grupo Administrators:")
+        print("An error occurred while getting the members of the Administrators group:")
         print(result.stderr)
-        
-    # Nome de usuário e senha do administrador
-    admin_user_name = "antonio.vicente"
-    admin_pass = "sasquasth" # Senha do usuário administrador    
 
     print(f"Trying to add printer: {caminho_impressora}")
-    
-    # PowerShell command para adicionar a impressora usando Start-Process com -Credential
-    powershell_command = (
-    f'Start-Process powershell -Credential (New-Object System.Management.Automation.PSCredential'
-    f'("{admin_user_name}", (ConvertTo-SecureString -String "{admin_pass}" -AsPlainText -Force)))'
-    f' -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command '
-    #(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("\\Printserver01\Xerox5")
-    #f'(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\\"{caminho_impressora}\\")"'
-    f'(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection({caminho_impressora})"'
-)
 
-    print("PowerShell command executed")
-    print(caminho_impressora)
-    
-    try:
-        # Execute o script PowerShell com privilégios elevados
-        result = subprocess.run(['powershell', '-Command', powershell_command], capture_output=True, text=True, shell=True)
-        print("PowerShell script executed")
-        # Exibir a saída do script PowerShell
-        print(result.stdout)
-
-        # Retornar a mensagem de resposta
+    # Adicionar a impressora de rede
+    result = win32print.AddPrinterConnection(caminho_impressora)
+    print(result)
+      
+    if result == None:
+        print("Impressora adicionada com sucesso!")
         return jsonify({'message': 'Impressora adicionada com sucesso'}), 200
-        print(jsonify({'message': 'Impressora adicionada com sucesso'}), 200)
-
-    except subprocess.CalledProcessError as e:
-        # Exibir qualquer mensagem de erro do script PowerShell
-        print(e.stderr)
+    else:
+        print("Não foi possível adicionar a impressora.")
         return jsonify({'message': 'Falha ao adicionar a impressora'}), 500
 
 # Define printer data for each office

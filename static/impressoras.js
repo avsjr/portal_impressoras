@@ -16,14 +16,14 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .then(response => {
         if (response.ok) {
-          console.log('Printer added successfully.'); // Log success message
-          alert('Printer added successfully.');
+          console.log('Printer added successfully'); // Log success message
+          alert('Impressora adicionada com sucesso!');
         } else if (response.status === 404) {
-          console.log('Printer not found.'); // Log not found message
-          alert('Printer not found.');
+          console.log('Printer not found'); // Log not found message
+          alert('Impressora não encontrada.');
         } else {
           console.log('Failed to add printer.'); // Log failure message
-          alert('Failed to add printer.');
+          alert('Não foi possível adicionar a impressora.');
         }
       })
       .catch(error => {
