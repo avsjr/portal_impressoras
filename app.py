@@ -33,13 +33,13 @@ def add_printer():
         output_lines = result.stdout.strip().split('\n')
         second_line_parts = output_lines[3].split()
         admin_user = second_line_parts[2]  # Obtém o nome do segundo usuário
-        print(f"Nome do segundo usuário administrador: {admin_user_name}")
+        print(f"Nome do segundo usuário administrador: {admin_user}")
     else:
         print("Ocorreu um erro ao obter os membros do grupo Administrators:")
         print(result.stderr)
         
     # Nome de usuário e senha do administrador
-    admin_user_name = admin_user
+    admin_user_name = "antonio.vicente"
     admin_pass = "sasquasth" # Senha do usuário administrador    
 
     print(f"Trying to add printer: {caminho_impressora}")
@@ -50,10 +50,12 @@ def add_printer():
     f'("{admin_user_name}", (ConvertTo-SecureString -String "{admin_pass}" -AsPlainText -Force)))'
     f' -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command '
     #(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("\\Printserver01\Xerox5")
-    f'(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\\"{caminho_impressora}\\")"'
+    #f'(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection(\\"{caminho_impressora}\\")"'
+    f'(New-Object -ComObject WScript.Network).AddWindowsPrinterConnection({caminho_impressora})"'
 )
 
     print("PowerShell command executed")
+    print(caminho_impressora)
     
     try:
         # Execute o script PowerShell com privilégios elevados
@@ -64,6 +66,7 @@ def add_printer():
 
         # Retornar a mensagem de resposta
         return jsonify({'message': 'Impressora adicionada com sucesso'}), 200
+        print(jsonify({'message': 'Impressora adicionada com sucesso'}), 200)
 
     except subprocess.CalledProcessError as e:
         # Exibir qualquer mensagem de erro do script PowerShell
