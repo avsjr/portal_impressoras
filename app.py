@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, render_template, request
 import subprocess
 import win32print
+import pyautogui
+import time
 
 app = Flask(__name__, static_url_path='', static_folder='static')
 
@@ -32,13 +34,24 @@ def add_printer():
         eigth_line_parts = output_lines[7].split()
         # Extract the username from the parts (assuming it's the third element)
         admin_user_name = eigth_line_parts[0]
-        admin_pass = "sasquasth"  # Senha do usuário administrador
+        
         print(f"Admin user name: {admin_user_name}")
     else:
         print("An error occurred while getting the members of the Administrators group:")
         print(result.stderr)
-
     print(f"Trying to add printer: {caminho_impressora}")
+
+    # Defina a senha do administrador
+    admin_pass = "sasquasth"
+    
+    # Set the password input focus
+    pyautogui.write(admin_pass)
+
+    # Press the Enter key to submit the password
+    pyautogui.press("enter")
+
+    # Delay to allow UAC prompt processing
+    time.sleep(3)
 
     # Adicionar a impressora de rede
     result = win32print.AddPrinterConnection(caminho_impressora)
