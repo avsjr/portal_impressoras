@@ -21,7 +21,7 @@ def add_printer():
     if caminho_impressora is None:
         return jsonify({'message': 'Printer not found'}), 404
 
-    # Run the 'net localgroup' command to get the members of the Administrators group
+    '''# Run the 'net localgroup' command to get the members of the Administrators group
     command = 'net localgroup Administradores'
     result = subprocess.run(command, capture_output=True, text=True, shell=True)
     
@@ -32,11 +32,11 @@ def add_printer():
         eigth_line_parts = output_lines[7].split()
         # Extract the username from the parts (assuming it's the third element)
         admin_user_name = eigth_line_parts[0]
-        
         print(f"Admin user name: {admin_user_name}")
     else:
         print("An error occurred while getting the members of the Administrators group:")
-        print(result.stderr)
+        print(result.stderr)'''
+        
     print(f"Trying to add printer: {caminho_impressora}")
 
     # Adicionar a impressora de rede
