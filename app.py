@@ -32,12 +32,11 @@ def add_printer():
         eigth_line_parts = output_lines[7].split()
         # Extract the username from the parts (assuming it's the third element)
         admin_user_name = eigth_line_parts[0]
-        admin_pass = "sasquasth"  # Senha do usuário administrador
+        
         print(f"Admin user name: {admin_user_name}")
     else:
         print("An error occurred while getting the members of the Administrators group:")
         print(result.stderr)
-
     print(f"Trying to add printer: {caminho_impressora}")
 
     # Adicionar a impressora de rede
@@ -67,11 +66,10 @@ platina_csc_printers = {
     "Marketing - Preto": "\\\\192.0.0.61\\csc-mkt-preto-c368"
 }
 
-
 platina_log_printers = {
     "LOG ADM - Colorida": "\\\\192.0.0.61\\platina-log-adc-colorida",
     "LOG ADM - Preto": "\\\\192.0.0.61\\platina-log-adm-preto",
-    "LOG ADM - FRascunho": "\\\\192.0.0.61\\platina-log-adm-rascunho",
+    "LOG ADM - Rascunho": "\\\\192.0.0.61\\platina-log-adm-rascunho",
     "Ambulatório": "\\\\192.0.0.61\\platina-log-ambulatorio-preto-m320f",
     "Expedição - Frente e Verso": "\\\\192.0.0.61\\platina-log-exp-frenteverso-c368",
     "Expedição - Preto": "\\\\192.0.0.61\\platina-log-exp-preto-c368",
