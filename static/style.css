@@ -113,7 +113,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(25% - 20px); /* Adjust width and margin as needed */
+    width: calc(25% - 20px);
     margin: 0px;
     text-align: center;
 }
@@ -141,56 +141,56 @@ h2 {
 .marketing_impressora .row0 {
     margin-left: 0px;
     margin-bottom: 0px;
-    border-color: #0a0c03; /* Add your desired background color */
-    border-style: solid;
+    /*border-color: #0a0c03; */
+    /* border-style: solid; */
     padding: 10px; /* Add padding to the row for spacing */
     border-radius: 0px; /* Add border radius for rounded corners */
     
 }
 
-.marketing_impressora .row1{
+/* .marketing_impressora .row1{
     border-style: solid;
-    border-color: #0a0c03; /* Add your desired background color */
+    border-color: #0a0c03;
 }
 
 .marketing_impressora .row2{
     border-style: solid;
-    border-color: #0a0c03; /* Add your desired background color */
+    border-color: #0a0c03; 
 }
 
 .marketing_impressora .row3{
     border-style: solid;
-    border-color: #0a0c03; /* Add your desired background color */
+    border-color: #0a0c03; 
 }
 
 .marketing_impressora .row4{
     border-style: solid;
-    border-color: #0a0c03; /* Add your desired background color */
+    border-color: #0a0c03; 
 }
 
 .marketing_impressora .row5{
     border-style: solid;
-    border-color: #0a0c03; /* Add your desired background color */
+    border-color: #0a0c03; 
 }
 .marketing_impressora .row6{
     border-style: solid;
-    border-color: #0a0c03; /* Add your desired background color */
+    border-color: #0a0c03; 
 }
 
 .marketing_impressora .row7{
     border-style: solid;
-    border-color: #0a0c03; /* Add your desired background color */
+    border-color: #0a0c03; 
 }
 
 .marketing_impressora .row8{
     border-style: solid;
-    border-color: #0a0c03; /* Add your desired background color */
+    border-color: #0a0c03; 
 }
 
 .marketing_impressora .row9{
     border-style: solid;
-    border-color: #0a0c03; /* Add your desired background color */
-}
+    border-color: #0a0c03; 
+} */
 
 /* Estilos pl_log */
 .log_administrativo_impressora,
