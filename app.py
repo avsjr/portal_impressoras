@@ -1,6 +1,13 @@
-from flask import Flask, jsonify, render_template, request
 import subprocess
+from flask import Flask, jsonify, render_template, request
 import win32print
+from win32print import AddPrinterConnection
+import os
+from dotenv import load_dotenv
+from getpass import getpass
+import sys
+
+load_dotenv()
 
 app = Flask(__name__, static_url_path='', static_folder='static')
 
@@ -20,27 +27,19 @@ def add_printer():
 
     if caminho_impressora is None:
         return jsonify({'message': 'Printer not found'}), 404
-
-    '''# Run the 'net localgroup' command to get the members of the Administrators group
-    command = 'net localgroup Administradores'
-    result = subprocess.run(command, capture_output=True, text=True, shell=True)
-    
-    # Check the exit code to determine if the command was successful
-    if result.returncode == 0:
-        output_lines = result.stdout.strip().split('\n')
-        # Get the eigth line (index 1) and split it into parts
-        eigth_line_parts = output_lines[7].split()
-        # Extract the username from the parts (assuming it's the third element)
-        admin_user_name = eigth_line_parts[0]
-        print(f"Admin user name: {admin_user_name}")
-    else:
-        print("An error occurred while getting the members of the Administrators group:")
-        print(result.stderr)'''
-        
+      
     print(f"Trying to add printer: {caminho_impressora}")
-
+   
+    admin_username = os.getenv("ADMIN_USERNAME")
+    admin_password = os.getenv("ADMIN_PASSWORD")
+    
     # Adicionar a impressora de rede
-    result = win32print.AddPrinterConnection(caminho_impressora)
+    result = win32print.ConnectToPrinter(
+    server_name=caminho_impressora,
+    username=admin_username,
+    password=admin_password
+)
+    #result = win32print.AddPrinterConnection(caminho_impressora)
     print(result)
       
     if result == None:
@@ -55,7 +54,7 @@ platina_csc_printers = {
     "CSC ADM - Frente e Verso": "\\\\192.0.0.61\\csc-adm-frenteverso-sp5200s",
     "CSC ADM - Preto": "\\\\192.0.0.61\\csc-adm-preto-sp5200s",
     "CSC ADM - Rascunho": "\\\\192.0.0.61\\csc-adm-rascunho-sp5200s",
-    "Exportação - Frente e Verso": "\\\\192.0.0.61\csc-exportacao-frenteverso-sp377sfnwx",
+    "Exportação - Frente e Verso": "\\\\192.0.0.61\\csc-exportacao-frenteverso-sp377sfnwx",
     "Exportação - Preto": "\\\\192.0.0.61\\csc-exportacao-preto-sp377sf",
     "Exportação - Rascunho": "\\\\192.0.0.61\\csc-exportacao-rascunho-sp377sfnwx",
     "Comercial - Preto": "\\\\192.0.0.61\\csc-comercial-preto-sp5200s",
