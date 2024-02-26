@@ -1,13 +1,5 @@
-import subprocess
 from flask import Flask, jsonify, render_template, request
-import win32print
 from win32print import AddPrinterConnection
-import os
-from dotenv import load_dotenv
-from getpass import getpass
-import sys
-
-load_dotenv()
 
 app = Flask(__name__, static_url_path='', static_folder='static')
 
@@ -19,30 +11,22 @@ def add_printer():
     caminho_impressora = None
 
     # Check each printer dictionary for the given printer name
-    for printer_dict in [platina_csc_printers, platina_log_printers, masterline_main_printers,
-                         masterline_log_printers, masterline_flexo_printers, masterline_emb_printers]:
+    for printer_dict in [platina_csc_printers,
+                         platina_log_printers,
+                         masterline_main_printers,
+                         masterline_log_printers,
+                         masterline_flexo_printers,
+                         masterline_emb_printers]:
         if printer_name in printer_dict:
             caminho_impressora = printer_dict[printer_name]
             break
 
     if caminho_impressora is None:
         return jsonify({'message': 'Printer not found'}), 404
-      
     print(f"Trying to add printer: {caminho_impressora}")
-   
-    admin_username = os.getenv("ADMIN_USERNAME")
-    admin_password = os.getenv("ADMIN_PASSWORD")
-    
-    # Adicionar a impressora de rede
-    result = win32print.ConnectToPrinter(
-    server_name=caminho_impressora,
-    username=admin_username,
-    password=admin_password
-)
-    #result = win32print.AddPrinterConnection(caminho_impressora)
+    result = AddPrinterConnection(caminho_impressora)
     print(result)
-      
-    if result == None:
+    if result is None:
         print("Impressora adicionada com sucesso!")
         return jsonify({'message': 'Impressora adicionada com sucesso'}), 200
     else:
@@ -134,9 +118,7 @@ masterline_emb_printers = {
     "MLN EMB - Preto": "\\\\192.0.0.61\\mln-embalagem-preto-sp5200s",
 }
 
-masterline_flexo_printers = {
-    
-}
+masterline_flexo_printers = {}
 
 # Define routes for each office's printer page
 @app.route('/')
@@ -166,8 +148,6 @@ def pl_flexo():
 @app.route('/ml_emb')
 def pl_emb():
     return render_template('ml_emb.html', impressoras=masterline_emb_printers)
-
-# Define routes for other office's printer pages...
 
 if __name__ == '__main__':
     app.run(debug=True)
