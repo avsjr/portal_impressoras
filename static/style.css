@@ -17,12 +17,41 @@ body, html {
 .logo_text {
     color: #000000; 
     font-size: 20px;
-    /*flex-grow: 1; /* Faz com que o texto no meio ocupe o espaço disponível */
     text-align: center;
 }
 
 .logo_img {
     width: 120px;
+    margin-top: 5px;
+}
+
+.main_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.platina_container {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100%;
+    padding: 10px; 
+}
+
+.logo_platina {
+    width: 120px;
+    margin-top: 5px;
+}
+
+.masterline_container {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100%;
+    padding: 10px; 
+}
+
+.logo_masterline {
+    width: 130px;
     margin-top: 5px;
 }
 
@@ -133,8 +162,6 @@ body, html {
 .marketing_impressora .row0 {
     margin-left: 0px;
     margin-bottom: 0px;
-    /*border-color: #0a0c03; */
-    /* border-style: solid; */
     padding: 10px; /* Add padding to the row for spacing */
     border-radius: 0px; /* Add border radius for rounded corners */
     
@@ -300,5 +327,16 @@ body, html {
     background-color: #222;
 }
 
+.footer-container {
+    width: 100%;
+    background-color: #0a0a0a;
+    padding: 10px;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+}
 
-
+.footer-container p {
+    color: aliceblue;
+    font-size: 12px;
+}
