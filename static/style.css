@@ -1,37 +1,29 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    font-family: 'Poppins', sans-serif;
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Isso impede a barra de rolagem horizontal */
 }
 
-h1 {
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
+.header-container{
+    width: 100%;
+    background-color: #8bc34b;
+    padding: 10px;
+    font-family: Roboto, sans-serif;
+    display: flex; 
+    margin: 0;
     align-items: center;
-    margin: 10px;
+}
+
+.logo_text {
+    color: #000000; 
     font-size: 20px;
-    margin-bottom: 10px;
-    color: #0a0a0a; /* Indigo color */
+    /*flex-grow: 1; /* Faz com que o texto no meio ocupe o espaço disponível */
+    text-align: center;
 }
 
-h2 {
-/*    left: 50%; /* Center horizontally */
-/*    transform: translateX(-50%); /* Adjust centering */
-    text-align: center; /* Centraliza o texto */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px; 
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #0a0a0a;
+.logo_img {
+    width: 120px;
+    margin-top: 5px;
 }
 
 /* Add a new CSS rule for visually hidden content */
@@ -147,50 +139,6 @@ h2 {
     border-radius: 0px; /* Add border radius for rounded corners */
     
 }
-
-/* .marketing_impressora .row1{
-    border-style: solid;
-    border-color: #0a0c03;
-}
-
-.marketing_impressora .row2{
-    border-style: solid;
-    border-color: #0a0c03; 
-}
-
-.marketing_impressora .row3{
-    border-style: solid;
-    border-color: #0a0c03; 
-}
-
-.marketing_impressora .row4{
-    border-style: solid;
-    border-color: #0a0c03; 
-}
-
-.marketing_impressora .row5{
-    border-style: solid;
-    border-color: #0a0c03; 
-}
-.marketing_impressora .row6{
-    border-style: solid;
-    border-color: #0a0c03; 
-}
-
-.marketing_impressora .row7{
-    border-style: solid;
-    border-color: #0a0c03; 
-}
-
-.marketing_impressora .row8{
-    border-style: solid;
-    border-color: #0a0c03; 
-}
-
-.marketing_impressora .row9{
-    border-style: solid;
-    border-color: #0a0c03; 
-} */
 
 /* Estilos pl_log */
 .log_administrativo_impressora,

@@ -35,87 +35,52 @@ def add_printer():
 
 # Define printer data for each office
 platina_csc_printers = {
-    "CSC ADM - Frente e Verso": "\\\\192.0.0.61\\csc-adm-frenteverso-sp5200s",
-    "CSC ADM - Preto": "\\\\192.0.0.61\\csc-adm-preto-sp5200s",
-    "CSC ADM - Rascunho": "\\\\192.0.0.61\\csc-adm-rascunho-sp5200s",
-    "Exportação - Frente e Verso": "\\\\192.0.0.61\\csc-exportacao-frenteverso-sp377sfnwx",
-    "Exportação - Preto": "\\\\192.0.0.61\\csc-exportacao-preto-sp377sf",
-    "Exportação - Rascunho": "\\\\192.0.0.61\\csc-exportacao-rascunho-sp377sfnwx",
-    "Comercial - Preto": "\\\\192.0.0.61\\csc-comercial-preto-sp5200s",
-    "Comercial - Rascunho": "\\\\192.0.0.61\\csc-comercial-rascunho-sp5200s",
-    "Marketing - A3": "\\\\192.0.0.61\\csc-mkt-a3-c368",
-    "Marketing - Colorido": "\\\\192.0.0.61\\csc-mkt-colorida-c368",
-    "Marketing - Frente e Verso": "\\\\192.0.0.61\\csc-mkt-frenteverso-c368",
-    "Marketing - Preto": "\\\\192.0.0.61\\csc-mkt-preto-c368"
+    "Platina CSC Administrativo": "\\\\192.0.0.61\\csc-adm-preto-sp5200s",
+    "Exportação": "\\\\192.0.0.61\\csc-exportacao-preto-sp377sf",
+    "Comercial": "\\\\192.0.0.61\\csc-comercial-preto-sp5200s",
+    "Marketing": "\\\\192.0.0.61\\csc-mkt-preto-c368"
 }
 
 platina_log_printers = {
-    "LOG ADM - Colorida": "\\\\192.0.0.61\\platina-log-adc-colorida",
-    "LOG ADM - Preto": "\\\\192.0.0.61\\platina-log-adm-preto",
-    "LOG ADM - Rascunho": "\\\\192.0.0.61\\platina-log-adm-rascunho",
+    "Platina LOG Administrativo": "\\\\192.0.0.61\\platina-log-adm-preto",
     "Ambulatório": "\\\\192.0.0.61\\platina-log-ambulatorio-preto-m320f",
-    "Expedição - Frente e Verso": "\\\\192.0.0.61\\platina-log-exp-frenteverso-c368",
-    "Expedição - Preto": "\\\\192.0.0.61\\platina-log-exp-preto-c368",
-    "Expedição - Rascunho": "\\\\192.0.0.61\\platina-log-exp-rascunho-c368",
+    "Expedição": "\\\\192.0.0.61\\platina-log-exp-preto-c368",
     "Expedição - Zebra": "\\\\192.0.0.61\\log-exp-zebra-zt230",
     "Recebimento": "\\\\192.0.0.61\\platina-log-rec-zgk420t",
-    "Segurança - Frente e Verso": "\\\\192.0.0.61\\platina-log-seg-frenteverso-sp3710sf",
-    "Segurança - Preto": "\\\\192.0.0.61\\platina-log-seg-preto-sp3710sf",
-    "Segurança - Rascunho": "\\\\192.0.0.61\\platina-log-seg-rascunho-sp3710sf"
+    "Segurança": "\\\\192.0.0.61\\platina-log-seg-preto-sp3710sf"
 }
 
 masterline_main_printers = {
-    "MLN ADM - A3": "\\\\192.0.0.61\\mln-adm-a3-mpc3503",
-    "MLN ADM - Colorida": "\\\\192.0.0.61\\mln-adm-colorida-mpc3503",
-    "MLN ADM - Frente e Verso": "\\\\192.0.0.61\\mln-adm-frenteverso-mpc3503",
-    "MLN ADM - Grosso": "\\\\192.0.0.61\\mln-adm-grosso-mpc3503",
-    "MLN ADM - Preto": "\\\\192.0.0.61\\mln-adm-preto-mpc3503",
-    "MLN ADM - Rascunho": "\\\\192.0.0.61\\mln-adm-rascunho-mpc3503",
-    "MLN ALMOX PIG - Sankhya": "\\\\192.0.0.61\\mln-almoxpigmento-sankhya-zebrazm400",
-    "MLN ALMOX QUIM - Etiqueta": "\\\\192.0.0.61\\mln-almoxquimica-etiquetas-zebrazm400",
-    "MLN ALMOX QUIM - Frente e Verso": "\\\\192.0.0.61\\mln-almoxquimica-frenteverso-brother8157",
-    "MLN ALMOX QUIM - Preto": "\\\\192.0.0.61\\mln-almoxquimica-preto-brother8157",
-    "MLN ALMOX QUIM - Rascunho": "\\\\192.0.0.61\\mln-almoxquimica-rascunho-brother8157",
-    "MLN ALMOX ROT - Preto": "\\\\192.0.0.61\\mln-almoxrotulos-preto-hpp1102w",
-    "MLN ALMOX ROT - Sankhya": "\\\\192.0.0.61\\mln-almoxrotulos-sankhya-zebrazt410",
-    "MLN AMB - Frente e Verso": "\\\\192.0.0.61\\mln-ambulatorio-frenteverso-sp5210sf",
-    "MLN AMB - Preto": "\\\\192.0.0.61\\mln-ambulatorio-preto-sp5210sf",
-    "MLN DP - Colorida": "\\\\192.0.0.61\\mln-dp-colorida-mpc3003",
-    "MLN DP - Frente e Verso": "\\\\192.0.0.61\\mln-dp-frenteverso-mpc3003",
-    "MLN DP - Preto": "\\\\192.0.0.61\\mln-dp-preto-mpc3003",
-    "MLN DP - Rascunho": "\\\\192.0.0.61\\mln-dp-rascunho-mpc3003",
-    "MLN ENV - Preto": "\\\\192.0.0.61\\mln-envase-preto-sp5200s",
-    "MLN - Corpore01": "\\\\192.0.0.61\\mln-etiquetas-corpore01-zebrazt410",
-    "MLN - Corpore02": "\\\\192.0.0.61\\mln-etiquetas-corpore02-zebrazt410",
-    "MLN - Corpore03": "\\\\192.0.0.61\\mln-etiquetas-corpore03-zebrazt410",
-    "MLN - Corpore05": "\\\\192.0.0.61\\mln-etiquetas-corporeO5-zebrazt411",
-    "MLN - Corpore06": "\\\\192.0.0.61\\mln-etiquetas-corpore06-zebrazt411",
-    "MLN - Corpore07": "\\\\192.0.0.61\\mln-etiquetas-corpore07-zebrazt411",
-    "MLN Fisicoquimico - Sankhya": "\\\\192.0.0.61\\mln-fisicoquimico-sankhyal-zebrazt411",
-    "MLN MAN - Frente e Verso": "\\\\192.0.0.61\\mln-manutencao-frenteverso-sp5210sf",
-    "MLN MAN - Preto": "\\\\192.0.0.61\\mln-manutencao-preto-sp5210sf",
-    "MLN MAN - Rascunho": "\\\\192.0.0.61\\mln-manutencao-rascunho-sp5210sf",
-    "MLN PED - A3": "\\\\192.0.0.61\\mln-ped-a3-mpc3003",
-    "MLN PED - Colorida": "\\\\192.0.0.61\\mln-ped-colorida-mpc3003",
-    "MLN PED - Etiquetas": "\\\\192.0.0.61\\mln-ped-etiquetas-mpc3003",
-    "MLN PED - Preto": "\\\\192.0.0.61\\mln-ped-preto-mpc3003",
-    "MLN PED - Frente e Verso": "\\\\192.0.0.61\\mln-dp-fernteverso-sp5200s",
-    "MLN PED - Rascunho": "\\\\192.0.0.61\\mln-ped-rascunho-mpc3003",
-    "MLN PES - Sankhya01": "\\\\192.0.0.61\\mln-pesagem-sankhya-zebras4m",
-    "MLN PES - Sankhya02": "\\\\192.0.0.61\\mln-pesagem-sankhya-zebrazt410"
+    "Masterline Administrativo": "\\\\192.0.0.61\\mln-adm-a3-mpc3503",
+    "Almoxarifado Pigmento - Sankhya": "\\\\192.0.0.61\\mln-almoxpigmento-sankhya-zebrazm400",
+    "Almoxarifado Quimico": "\\\\192.0.0.61\\mln-almoxquimica-frenteverso-brother8157",
+    "Almoxarifado Rotulos": "\\\\192.0.0.61\\mln-almoxrotulos-preto-hpp1102w",
+    "Almoxarifado Rotulos - Sankhya": "\\\\192.0.0.61\\mln-almoxrotulos-sankhya-zebrazt410",
+    "Ambulatório": "\\\\192.0.0.61\\mln-ambulatorio-preto-sp5210sf",
+    "Departamento Pessoal": "\\\\192.0.0.61\\mln-dp-preto-mpc3003",
+    "Envase": "\\\\192.0.0.61\\mln-envase-preto-sp5200s",
+    "Corpore01": "\\\\192.0.0.61\\mln-etiquetas-corpore01-zebrazt410",
+    "Corpore02": "\\\\192.0.0.61\\mln-etiquetas-corpore02-zebrazt410",
+    "Corpore03": "\\\\192.0.0.61\\mln-etiquetas-corpore03-zebrazt410",
+    "Corpore05": "\\\\192.0.0.61\\mln-etiquetas-corporeO5-zebrazt411",
+    "Corpore06": "\\\\192.0.0.61\\mln-etiquetas-corpore06-zebrazt411",
+    "Corpore07": "\\\\192.0.0.61\\mln-etiquetas-corpore07-zebrazt411",
+    "Fisico Quimico - Sankhya": "\\\\192.0.0.61\\mln-fisicoquimico-sankhyal-zebrazt411",
+    "Manutenção": "\\\\192.0.0.61\\mln-manutencao-preto-sp5210sf",
+    "P&D - Preto": "\\\\192.0.0.61\\mln-ped-preto-mpc3003",
+    "P&D - Frente e Verso": "\\\\192.0.0.61\\mln-dp-fernteverso-sp5200s",
+    "Pesagem - Sankhya01": "\\\\192.0.0.61\\mln-pesagem-sankhya-zebras4m",
+    "Pesagem - Sankhya02": "\\\\192.0.0.61\\mln-pesagem-sankhya-zebrazt410"
 }
 
 masterline_log_printers = {
-    "MLN LOG - Frente e Verso": "\\\\192.0.0.61\\mln-log-estoque-frenteverso-sp5210sf",
-    "MLN LOG - Preto": "\\\\192.0.0.61\\mln-log-estoque-preto-sp5210sf",
-    "MLN LOG - Rascunho": "\\\\192.0.0.61\\mln-log-estoque-rascunho-sp5210sf",
-    "MLN LOG - Sankhya": "\\\\192.0.0.61\\mln-log-estoque-sankhya-gk420t"
+    "Masterline LOG": "\\\\192.0.0.61\\mln-log-estoque-preto-sp5210sf",
+    "Masterline LOG - Sankhya": "\\\\192.0.0.61\\mln-log-estoque-sankhya-gk420t"
 }
 
 masterline_emb_printers = {
-    "MLN EMB - Sankhya": "\\\\192.0.0.61\\mln-emabalagem-sankhya-zebrazm400",
-    "MLN EMB - Frente e Verso": "\\\\192.0.0.61\\mln-embalagem-frenteverso-sp5200s",
-    "MLN EMB - Preto": "\\\\192.0.0.61\\mln-embalagem-preto-sp5200s",
+    "Masterline Embalagem": "\\\\192.0.0.61\\mln-embalagem-preto-sp5200s",
+    "Masterline Embalagem - Sankhya": "\\\\192.0.0.61\\mln-emabalagem-sankhya-zebrazm400"
 }
 
 masterline_flexo_printers = {}
