@@ -32,27 +32,27 @@ body, html {
 }
 
 .platina_container {
-    margin-left: 20px;
-    margin-right: 20px;
-    max-width: 100%;
-    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo_platina {
     width: 120px;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .masterline_container {
-    margin-left: 20px;
-    margin-right: 20px;
-    max-width: 100%;
-    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo_masterline {
     width: 130px;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Add a new CSS rule for visually hidden content */
@@ -265,7 +265,6 @@ body, html {
     position: fixed;
     top: 30px;
     left: 10%;
-    /*transform: translateX(-50%);*/
     padding: 0;
     border: none;
     cursor: pointer;
@@ -307,24 +306,21 @@ body, html {
 }
 
 .button-link {
-    display: block;
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 15px;
-    text-align: center;
-    text-decoration: none;
+    background-color: #c7e28e; /* Cor de fundo do botão */
+    color: #000; /* Cor do texto do botão */
+    padding: 5px 5px;
+    border-radius: 5px;
     cursor: pointer;
-    border: 1px solid #333;
-    background-color: #333;
-    color: #fff;
-    border-radius: 4px;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    height: 40px; /* Altura fixa para todos os botões */
-    width: 100%; /* Largura fixa para todos os botões */
+    margin-top: 5px;
+    margin-bottom: 10px;  
+    font-weight: bold; 
+    font-size: 13px;
+    height: 30px;
+    width: 150px;
 }
 
 .button-link:hover {
-    background-color: #222;
+    background-color: #a2cd5a;
 }
 
 .footer-container {
