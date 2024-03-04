@@ -55,7 +55,6 @@ body, html {
     margin-bottom: 10px;
 }
 
-/* Add a new CSS rule for visually hidden content */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -66,63 +65,6 @@ body, html {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
-}
-
-/* Style the user-friendly printer name */
-.user-friendly-name {
-    font-size: 14px;
-    margin: auto;
-    text-align: center;
-    color: #343a40; /* Dark gray color */
-}
-
-/* Estilos Index */
-#localidade {
-    display: flex;
-    justify-content: center;
-    max-width: 1000px;
-    margin-top: 30px;
-}
-
-.platina,
-.masterline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: top;
-    margin: 30px;
-}
-
-.platina img,
-.masterline img {
-    width: 140px;
-    height: 140px;
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.platina p,
-.masterline p {
-    font-size: 17px;
-    margin: auto;
-    text-align: center;
-    color: #343a40; /* Dark gray color */
-}
-
-/* Estilos geral impressoras */
-#impressoras {
-    display: flex;
-    justify-content: space-between; /* Distribute items with space between them */
-    align-items: flex-start; /* Align items to the top */
-    max-width: 1000px; /* Adjust as needed */
-    margin-top: 30px;
-}
-.impressora {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
 }
 
 /* Estilos pl_csc */
@@ -138,16 +80,7 @@ body, html {
     margin: 0px;
     text-align: center;
 }
-.csc_administrativo_impressora img,
-.exportacao_impressora img,
-.comercial_impressora img,
-.marketing_impressora img {
-    width: 60px;
-    height: 60px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    margin-bottom: 0px;
-}
+
 .csc_administrativo_impressora p,
 .exportacao_impressora p,
 .comercial_impressora p,
@@ -156,15 +89,6 @@ body, html {
     margin: auto;
     text-align: center;
     color: #343a40; 
-}
-
-.csc_administrativo_impressora .row1,
-.marketing_impressora .row0 {
-    margin-left: 0px;
-    margin-bottom: 0px;
-    padding: 10px; /* Add padding to the row for spacing */
-    border-radius: 0px; /* Add border radius for rounded corners */
-    
 }
 
 /* Estilos pl_log */
@@ -177,20 +101,10 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(20% - 10px); /* Adjust width and margin as needed */
+    width: calc(20% - 10px);
     margin: 10px;
 }
-.log_administrativo_impressora img, 
-.ambulatorio_impressora img,
-.expedicao_impressora img,
-.recebimento_impressora img,
-.seguranca_impressora img {
-    width: 60px;
-    height: 60px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    margin-bottom: 0px;
-}
+
 .log_administrativo_impressora p,
 .ambulatorio_impressora p,
 .expedicao_impressora p,
@@ -199,7 +113,7 @@ body, html {
     font-size: 17px;
     margin: auto;
     text-align: center;
-    color: #343a40; /* Dark gray color */
+    color: #343a40;
 }
 
 /* Estilos mln_main */
@@ -219,27 +133,8 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(8,33% - 10px); /* Adjust width and margin as needed */
-    margin: 20px auto; /* Set auto margin for left and right */
-}
-
-.mln_administrativo_impressora img,
-.mln_almoxarifado_impressora img,
-.mln_almoxarifado_rotulo_impressora img,
-.mln_almoxarifado_pigmento_impressora img,
-.mln_dp_impressora img,
-.mln_envase_impressora img,
-.mln_corpore_impressora img,
-.mln_fisicoquimico img,
-.mln_ped_impressora img,
-.mln_manut_impressora img,
-.mln_pes_impressora img,
-.mln_amb_impressora img {
-    width: 60px;
-    height: 60px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    margin-bottom: 0px;
+    width: calc(8,33% - 10px);
+    margin: 20px auto;
 }
 
 .mln_administrativo_impressora p,
@@ -257,57 +152,39 @@ body, html {
     font-size: 17px;
     margin: auto;
     text-align: center;
-    color: #343a40; /* Dark gray color */
+    color: #343a40;
 }
 
-/* Estilos Botão Home */
-.home-button {
-    position: fixed;
-    top: 30px;
-    left: 10%;
-    padding: 0;
-    border: none;
-    cursor: pointer;
-    background-color: transparent; /* No background color */
-}
-
-.home-button img {
-    width: 190px;
-    height: 30px;
-    display: block; /* Remove any inline-level spacing */
-}
-
-.home-button img:hover {
-    opacity: 0.8;
-    outline: none; /* Remove the blue outline on focus */
-}
-
-/* Estilos Botão Adicionar */
-.btn-adicionar {
-    font-size: 12px;
-    cursor: pointer;
-    padding: 4px 8px;
-    background-color: #1b5e20; /* Dark green color */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.btn-adicionar:hover {
-    background-color: #114915; /* Darker green color on hover */
-}
-
-/* Estilos Botão pagina inicial */
+/* Estilos Container Botões */
 .button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Estilos Botão Adicionar */
+.btn-adicionar {
+    background-color: #c7e28e;
+    color: #000;
+    padding: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 10px;  
+    font-weight: bold; 
+    font-size: 13px;
+    height: 30px;
+    width: 150px;
+}
+
+.btn-adicionar:hover {
+    background-color: #a2cd5a;
+}
+
+/* Estilos Botão Localidades */
 .button-link {
-    background-color: #c7e28e; /* Cor de fundo do botão */
-    color: #000; /* Cor do texto do botão */
+    background-color: #c7e28e;
+    color: #000; 
     padding: 5px 5px;
     border-radius: 5px;
     cursor: pointer;

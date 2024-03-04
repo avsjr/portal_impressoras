@@ -14,122 +14,44 @@
         <a href="{{ url_for('index') }}">
             <img class='logo_img' src="{{ url_for('static', filename='img/logo-skala.png') }}" alt="Descrição da Imagem">
         </a>
-        <h1 class='logo_text'>Impressoras Platina CSC</h1>
+        <h1 class='logo_text'>Platina CSC</h1>
     </div>
+    
     <div class="main-container">
-
-<!-- Marketing-->
-<div class="marketing_impressora">
-    <div class="row0">
-        <h2>Marketing</h2>
+    <!-- Marketing-->
+    <div class="marketing_impressora">
+            <h2>Marketing</h2>
+        <div class="impressora">
+            <p class="printer-name visually-hidden">Marketing</p>
+            <button class="btn-adicionar">Adicionar</button>
+        </div>
+    </div>        
+    <!-- Administrativo -->
+    <div class="csc_administrativo_impressora">
+            <h2>Administrativo</h2> 
+        <div class="impressora">
+            <p class="printer-name visually-hidden">CSC ADM</p>
+            <button class="btn-adicionar">Adicionar</button>
+        </div>
+    </div> 
+    <!-- Exportação -->
+    <div class="exportacao_impressora">
+            <h2>Exportação</h2> 
+        <div class="impressora">
+            <p class="printer-name visually-hidden">Exportação</p>
+            <button class="btn-adicionar">Adicionar</button>
+        </div>
     </div>
-    <div class="row1">
-        <img class="printer-logo" src="{{ url_for('static', filename='images/csc_marketing.jpg') }}" alt="Marketing Logo">
+    <!-- Comercial -->
+    <div class="comercial_impressora">
+            <h2>Comercial</h2> 
+        <div class="impressora">
+            <p class="printer-name visually-hidden">Comercial - Preto</p>
+            <button class="btn-adicionar">Adicionar</button>
+        </div>
     </div>
-    <div class="impressora">
-    <div class="row2">
-        <p class="printer-name visually-hidden">Marketing - Colorido</p>
-        <span class="user-friendly-name">Colorido</span>
-    </div>
-    <div class="row3">    
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    </div>
-    <div class="impressora">
-    <div class="row4">
-        <p class="printer-name visually-hidden">Marketing - Preto</p>
-        <span class="user-friendly-name">Preto</span>
-    </div>
-    <div class="row5">
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    </div>
-    <div class="impressora">
-    <div class="row6">
-        <p class="printer-name visually-hidden">Marketing - A3</p>
-        <span class="user-friendly-name">A3</span>
-    </div>
-    <div class="row7">
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    </div>
-    <div class="impressora">
-    <div class="row8">
-        <p class="printer-name visually-hidden">Marketing - Frente e Verso</p>
-        <span class="user-friendly-name">Frente e Verso</span>
-    </div>
-    <div class="row9">
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    </div>
-</div>        
-
-<!-- Administrativo -->
-<div class="csc_administrativo_impressora">
-    <h2>Administrativo</h2> 
-    <img src="{{ url_for('static', filename='images/csc_adm-comercial.jpg') }}" alt="ADM Logo"></h2>
-    <div class="impressora">
-        <p class="printer-name visually-hidden">CSC ADM - Preto</p>
-        <span class="user-friendly-name">Preto</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    <div class="impressora">
-        <p class="printer-name visually-hidden">CSC ADM - Frente e Verso</p>
-        <span class="user-friendly-name">Frente e Verso</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    <div class="impressora">
-        <p class="printer-name visually-hidden">CSC ADM - Rascunho</p>
-        <span class="user-friendly-name">Rascunho</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-</div>
-        
-<!-- Exportação -->
-<div class="exportacao_impressora">
-    <h2>Exportação</h2> 
-    <img class="printer-logo" src="{{ url_for('static', filename='images/csc_exportacao.jpg') }}" alt="Exportação Logo">
-    <div class="impressora">
-        <p class="printer-name visually-hidden">Exportação - Preto</p>
-        <span class="user-friendly-name">Preto</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    <div class="impressora">
-        <p class="printer-name visually-hidden">Exportação - Frente e Verso</p>
-        <span class="user-friendly-name">Frente e Verso</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    <div class="impressora">
-        <p class="printer-name visually-hidden">Exportação - Rascunho</p>
-        <span class="user-friendly-name">Rascunho</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-</div>
-
-<!-- Comercial -->
-<div class="comercial_impressora">
-    <h2>Comercial</h2> 
-    <img class="printer-logo" src="{{ url_for('static', filename='images/csc_adm-comercial.jpg') }}" alt="Comercial Logo">
-    <div class="impressora">
-        <p class="printer-name visually-hidden">Comercial - Preto</p>
-        <span class="user-friendly-name">Preto</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-    <div class="impressora">
-        <p class="printer-name visually-hidden">Comercial - Rascunho</p>
-        <span class="user-friendly-name">Rascunho</span>
-        <button class="btn-adicionar">Adicionar</button>
-    </div>
-</div>
-</div>
-
-        <!-- Home button -->
-        <a href="{{ url_for('index') }}" class="home-button">
-            <img src="{{ url_for('static', filename='images/logo-skala-vegano.png') }}" alt="Home Icon">
-        </a>
-
-    <!-- Reference the impressoras.js script -->
-    <script src="{{ url_for('static', filename='impressoras.js') }}"></script>
-
+    <div class="footer-container">
+        <p>Copyright © 2022 Grupo Skala - Desenvolvido por SKALA.TECH</p>
+    </div> 
 </body>
 </html>
