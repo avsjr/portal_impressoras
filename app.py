@@ -35,7 +35,7 @@ def add_printer():
 
 # Define printer data for each office
 platina_csc_printers = {
-    "Platina CSC Administrativo": "\\\\192.0.0.61\\csc-adm-preto-sp5200s",
+    "CSC ADM": "\\\\192.0.0.61\\csc-adm-preto-sp5200s",
     "Exportação": "\\\\192.0.0.61\\csc-exportacao-preto-sp377sf",
     "Comercial": "\\\\192.0.0.61\\csc-comercial-preto-sp5200s",
     "Marketing": "\\\\192.0.0.61\\csc-mkt-preto-c368"
@@ -89,30 +89,23 @@ masterline_flexo_printers = {}
 @app.route('/')
 def index():
     return render_template('index.html')
-
 @app.route('/pl_csc')
 def pl_csc():
     return render_template('pl_csc.html', impressoras=platina_csc_printers)
-
 @app.route('/pl_log')
 def pl_log():
     return render_template('pl_log.html', impressoras=platina_log_printers)
-
 @app.route('/ml_main')
 def ml_main():
     return render_template('ml_main.html', impressoras=masterline_main_printers)
-
 @app.route('/ml_log')
 def ml_log():
     return render_template('ml_log.html', impressoras=masterline_log_printers)
-
 @app.route('/ml_flexo')
 def pl_flexo():
     return render_template('ml_flexo.html', impressoras=masterline_flexo_printers)
-
 @app.route('/ml_emb')
 def pl_emb():
     return render_template('ml_emb.html', impressoras=masterline_emb_printers)
-
 if __name__ == '__main__':
     app.run(debug=True)

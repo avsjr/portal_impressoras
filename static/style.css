@@ -25,13 +25,9 @@ body, html {
     margin-top: 5px;
 }
 
-.main_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.platina_container {
+.main_container,
+.platina_container,
+.masterline_container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,12 +37,6 @@ body, html {
     width: 120px;
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-.masterline_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .logo_masterline {
@@ -81,79 +71,20 @@ body, html {
     text-align: center;
 }
 
-.csc_administrativo_impressora p,
-.exportacao_impressora p,
-.comercial_impressora p,
-.marketing_impressora p {
+.csc_administrativo_impressora h2,
+.exportacao_impressora h2,
+.comercial_impressora h2,
+.marketing_impressora h2 {
     font-size: 17px;
+    font-family: Roboto, sans-serif;
     margin: auto;
     text-align: center;
     color: #343a40; 
 }
 
 /* Estilos pl_log */
-.log_administrativo_impressora,
-.ambulatorio_impressora,
-.expedicao_impressora,
-.recebimento_impressora,
-.seguranca_impressora {
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: calc(20% - 10px);
-    margin: 10px;
-}
-
-.log_administrativo_impressora p,
-.ambulatorio_impressora p,
-.expedicao_impressora p,
-.recebimento_impressora p,
-.seguranca_impressora p {
-    font-size: 17px;
-    margin: auto;
-    text-align: center;
-    color: #343a40;
-}
 
 /* Estilos mln_main */
-.mln_administrativo_impressora,
-.mln_almoxarifado_impressora,
-.mln_almoxarifado_rotulo_impressora,
-.mln_almoxarifado_pigmento_impressora,
-.mln_dp_impressora,
-.mln_envase_impressora,
-.mln_corpore_impressora,
-.mln_fisicoquimico,
-.mln_ped_impressora,
-.mln_manut_impressora,
-.mln_pes_impressora,
-.mln_amb_impressora {
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: calc(8,33% - 10px);
-    margin: 20px auto;
-}
-
-.mln_administrativo_impressora p,
-.mln_almoxarifado_impressora p,
-.mln_almoxarifado_rotulo_impressora p,
-.mln_almoxarifado_pigmento_impressora p,
-.mln_dp_impressora p,
-.mln_envase_impressora p,
-.mln_corpore_impressora p,
-.mln_fisicoquimico p,
-.mln_ped_impressora p,
-.mln_manut_impressora p,
-.mln_pes_impressora p,
-.mln_amb_impressora p {
-    font-size: 17px;
-    margin: auto;
-    text-align: center;
-    color: #343a40;
-}
 
 /* Estilos Container Botões */
 .button-container {
@@ -166,15 +97,14 @@ body, html {
 .btn-adicionar {
     background-color: #c7e28e;
     color: #000;
-    padding: 5px 5px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 5px;
     margin-bottom: 10px;  
     font-weight: bold; 
-    font-size: 13px;
-    height: 30px;
-    width: 150px;
+    font-size: 12px;
+    height: 20px;
+    width: 90px;
 }
 
 .btn-adicionar:hover {
@@ -193,7 +123,7 @@ body, html {
     font-weight: bold; 
     font-size: 13px;
     height: 30px;
-    width: 150px;
+    width: 140px;
 }
 
 .button-link:hover {
