@@ -1,37 +1,51 @@
+#import subprocess
+import win32print
+import win32con
 from flask import Flask, jsonify, render_template, request
-from win32print import AddPrinterConnection
 
 app = Flask(__name__, static_url_path='', static_folder='static')
 
-@app.route('/addPrinter', methods=['POST'])
-def add_printer():
+def adicionar_impressora(printer_path):
+    try:
+        win32print.AddPrinterConnection(printer_path)
+        print("Impressora adicionada com sucesso!")
+        return jsonify({'message': 'Impressora adicionada com sucesso'}), 200
+    except win32print.error as e:
+        print(f"Erro ao adicionar a impressora: {e}")
+        return jsonify({'message': f'Erro ao adicionar a impressora: {e}'}, 500)
+
+'''def adicionar_impressora(printer_path):
+    powershell_path = r'C:\\Program Files\\PowerShell\\7\\pwsh.exe'
+    powershell_cmd = f"{powershell_path} (New-Object -ComObject WScript.Network).AddWindowsPrinterConnection('{printer_path}')"
+    subprocess.run([powershell_path, '-Command', powershell_cmd], check=True, shell=True)'''
+
+@app.route('/adicionarImpressora', methods=['POST'])
+def add_printer_route():
     data = request.json
     printer_name = data.get('printerName')
-
     caminho_impressora = None
 
-    # Check each printer dictionary for the given printer name
     for printer_dict in [platina_csc_printers,
-                         platina_log_printers,
-                         masterline_main_printers,
-                         masterline_log_printers,
-                         masterline_flexo_printers,
-                         masterline_emb_printers]:
+                        platina_log_printers,
+                        masterline_main_printers,
+                        masterline_log_printers,
+                        masterline_flexo_printers,
+                        masterline_emb_printers]:
         if printer_name in printer_dict:
             caminho_impressora = printer_dict[printer_name]
             break
-
     if caminho_impressora is None:
         return jsonify({'message': 'Printer not found'}), 404
+
     print(f"Trying to add printer: {caminho_impressora}")
-    result = AddPrinterConnection(caminho_impressora)
-    print(result)
-    if result is None:
+
+    try:
+        adicionar_impressora(caminho_impressora)
         print("Impressora adicionada com sucesso!")
         return jsonify({'message': 'Impressora adicionada com sucesso'}), 200
-    else:
-        print("Não foi possível adicionar a impressora.")
-        return jsonify({'message': 'Falha ao adicionar a impressora'}), 500
+    except subprocess.CalledProcessError as e:
+        print(f"Erro ao adicionar a impressora: {e}")
+        return jsonify({'message': f'Erro ao adicionar a impressora: {e}'}, 500)
 
 # Define printer data for each office
 platina_csc_printers = {
@@ -40,7 +54,6 @@ platina_csc_printers = {
     "Comercial": "\\\\192.0.0.61\\csc-comercial-preto-sp5200s",
     "Marketing": "\\\\192.0.0.61\\csc-mkt-preto-c368"
 }
-
 platina_log_printers = {
     "Platina LOG Administrativo": "\\\\192.0.0.61\\platina-log-adm-preto",
     "Ambulatório": "\\\\192.0.0.61\\platina-log-ambulatorio-preto-m320f",
@@ -49,7 +62,6 @@ platina_log_printers = {
     "Recebimento": "\\\\192.0.0.61\\platina-log-rec-zgk420t",
     "Segurança": "\\\\192.0.0.61\\platina-log-seg-preto-sp3710sf"
 }
-
 masterline_main_printers = {
     "Masterline Administrativo": "\\\\192.0.0.61\\mln-adm-a3-mpc3503",
     "Almoxarifado Pigmento - Sankhya": "\\\\192.0.0.61\\mln-almoxpigmento-sankhya-zebrazm400",
@@ -72,19 +84,15 @@ masterline_main_printers = {
     "Pesagem - Sankhya01": "\\\\192.0.0.61\\mln-pesagem-sankhya-zebras4m",
     "Pesagem - Sankhya02": "\\\\192.0.0.61\\mln-pesagem-sankhya-zebrazt410"
 }
-
 masterline_log_printers = {
     "Masterline LOG": "\\\\192.0.0.61\\mln-log-estoque-preto-sp5210sf",
     "Masterline LOG - Sankhya": "\\\\192.0.0.61\\mln-log-estoque-sankhya-gk420t"
 }
-
 masterline_emb_printers = {
     "Masterline Embalagem": "\\\\192.0.0.61\\mln-embalagem-preto-sp5200s",
     "Masterline Embalagem - Sankhya": "\\\\192.0.0.61\\mln-emabalagem-sankhya-zebrazm400"
 }
-
 masterline_flexo_printers = {}
-
 # Define routes for each office's printer page
 @app.route('/')
 def index():
@@ -107,5 +115,6 @@ def pl_flexo():
 @app.route('/ml_emb')
 def pl_emb():
     return render_template('ml_emb.html', impressoras=masterline_emb_printers)
+
 if __name__ == '__main__':
     app.run(debug=True)
