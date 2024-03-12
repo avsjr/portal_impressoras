@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Isso impede a barra de rolagem horizontal */
+    overflow-x: hidden;
 }
 
 .header-container{
@@ -41,7 +41,7 @@ body, html {
 }
 
 .logo_masterline {
-    width: 130px;
+    width: 140px;
     margin-top: 10px;
     margin-bottom: 10px;
 }

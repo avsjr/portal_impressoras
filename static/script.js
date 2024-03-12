@@ -2,7 +2,7 @@ console.log('Script loaded successfully');
 
 document.addEventListener('DOMContentLoaded', function () {
     function adicionarImpressora(printerName) {
-        console.log('Printer name:', printerName); // Log the printer name
+        console.log('Printer name:', printerName);
 
         // Make a POST request to the Python server to add the printer
         fetch('/adicionarImpressora', {
@@ -14,18 +14,18 @@ document.addEventListener('DOMContentLoaded', function () {
         })
             .then(response => {
                 if (response.ok) {
-                    console.log('Printer added successfully'); // Log success message
+                    console.log('Printer added successfully');
                     alert('Impressora adicionada com sucesso!');
                 } else if (response.status === 404) {
-                    console.log('Printer not found'); // Log not found message
+                    console.log('Printer not found');
                     alert('Impressora não encontrada.');
                 } else {
-                    console.log('Failed to add printer.'); // Log failure message
+                    console.log('Failed to add printer.');
                     alert('Não foi possível adicionar a impressora.');
                 }
             })
             .catch(error => {
-                console.error('Error:', error); // Log error message
+                console.error('Error:', error);
                 alert('Error: ' + error);
             });
     }

@@ -1,6 +1,4 @@
-#import subprocess
 import win32print
-import win32con
 from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__, static_url_path='', static_folder='static')
@@ -10,14 +8,9 @@ def adicionar_impressora(printer_path):
         win32print.AddPrinterConnection(printer_path)
         print("Impressora adicionada com sucesso!")
         return jsonify({'message': 'Impressora adicionada com sucesso'}), 200
-    except win32print.error as e:
+    except Exception as e:
         print(f"Erro ao adicionar a impressora: {e}")
         return jsonify({'message': f'Erro ao adicionar a impressora: {e}'}, 500)
-
-'''def adicionar_impressora(printer_path):
-    powershell_path = r'C:\\Program Files\\PowerShell\\7\\pwsh.exe'
-    powershell_cmd = f"{powershell_path} (New-Object -ComObject WScript.Network).AddWindowsPrinterConnection('{printer_path}')"
-    subprocess.run([powershell_path, '-Command', powershell_cmd], check=True, shell=True)'''
 
 @app.route('/adicionarImpressora', methods=['POST'])
 def add_printer_route():
@@ -38,21 +31,21 @@ def add_printer_route():
         return jsonify({'message': 'Printer not found'}), 404
 
     print(f"Trying to add printer: {caminho_impressora}")
-
+    
     try:
         adicionar_impressora(caminho_impressora)
         print("Impressora adicionada com sucesso!")
         return jsonify({'message': 'Impressora adicionada com sucesso'}), 200
-    except subprocess.CalledProcessError as e:
+    except win32print.error as e:
         print(f"Erro ao adicionar a impressora: {e}")
         return jsonify({'message': f'Erro ao adicionar a impressora: {e}'}, 500)
 
-# Define printer data for each office
 platina_csc_printers = {
     "CSC ADM": "\\\\192.0.0.61\\csc-adm-preto-sp5200s",
     "Exportação": "\\\\192.0.0.61\\csc-exportacao-preto-sp377sf",
     "Comercial": "\\\\192.0.0.61\\csc-comercial-preto-sp5200s",
-    "Marketing": "\\\\192.0.0.61\\csc-mkt-preto-c368"
+    "Marketing": "\\\\192.0.0.61\\csc-mkt-preto-c368",
+    "Financeiro": "\\\\192.0.0.61\\csc-financeiro-1102w"
 }
 platina_log_printers = {
     "Platina LOG Administrativo": "\\\\192.0.0.61\\platina-log-adm-preto",
