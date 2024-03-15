@@ -62,12 +62,12 @@ body, html {
 .csc_administrativo_impressora,
 .exportacao_impressora,
 .comercial_impressora,
-.marketing_impressora {
+.marketing_impressora,
+.financeiro_impressora {
     font-size: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(25% - 20px);
     margin: 0px;
     text-align: center;
 }
@@ -75,10 +75,11 @@ body, html {
 .csc_administrativo_impressora h2,
 .exportacao_impressora h2,
 .comercial_impressora h2,
-.marketing_impressora h2 {
-    font-size: 17px;
+.marketing_impressora h2,
+.financeiro_impressora h2 {
+    font-size: 18px;
     font-family: Roboto, sans-serif;
-    margin: auto;
+    margin-top: 10px;
     text-align: center;
     color: #343a40; 
 }
@@ -100,12 +101,12 @@ body, html {
     color: #000;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 5px;
-    margin-bottom: 10px;  
-    font-weight: bold; 
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
     font-size: 12px;
-    height: 20px;
-    width: 90px;
+    height: 25px;
+    width: 150px;
 }
 
 .btn-adicionar:hover {

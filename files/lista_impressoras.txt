@@ -1,5 +1,6 @@
-----PLATINA CSC---
-
+-------------------------------------------------
+PLATINA CSC
+-------------------------------------------------
 ADM - Frente e Verso endereço:  \\192.0.0.61\csc-adm-frenteverso-sp5200s
 ADM - Preto endereço: \\192.0.0.61\csc-adm-preto-sp5200s
 ADM Rascunho endereço: \\192.0.0.61\csc-adm-rascunho-sp5200s
@@ -12,9 +13,9 @@ Marketing - A3 endereço: \\192.0.0.61\csc-mkt-a3-c368
 Marketing - Colorida endereço: \\192.0.0.61\csc-mkt-colorida-c368
 Marketing - Frente e Verso endereço: \\192.0.0.61\esc-mkt-frenteverso-c368
 Marketing - Preto endereço: \\192.0.0.61\esc-mkt-preto-c368
-
-----PLATINA LOG---
-
+-------------------------------------------------
+PLATINA LOG
+-------------------------------------------------
 \\\\192.0.0.61\\log-adm-preto-c3002
 \\\\192.0.0.61\\platina-log-adc-colorida
 \\\\192.0.0.61\\platina-log-adm-preto
@@ -32,9 +33,9 @@ Marketing - Preto endereço: \\192.0.0.61\esc-mkt-preto-c368
 \\\\192.0.0.61\\platina-log-seg-frenteverso-sp3710sf
 \\\\192.0.0.61\\platina-log-seg-preto-sp3710sf
 \\\\192.0.0.61\\platina-log-seg-rascunho-sp3710sf
-
-----MASTERLINE---
-
+-------------------------------------------------
+MASTERLINE
+-------------------------------------------------
 \\\\192.0.0.61\\mln-adm-a3-mpc3503
 \\\\192.0.0.61\\mln-adm-colorida-mpc3503
 \\\\192.0.0.61\\mln-adm-frenteverso-mpc3503
@@ -76,24 +77,21 @@ Marketing - Preto endereço: \\192.0.0.61\esc-mkt-preto-c368
 
 \\\\192.0.0.61\\mln-pesagem-sankhya-zebras4m
 \\\\192.0.0.61\\mln-pesagem-sankhya-zebrazt410
-
----MASTERLINE EMBALAGEM---
-
+-------------------------------------------------
+MASTERLINE EMBALAGEM
+-------------------------------------------------
 \\\\192.0.0.61\\mln-emabalagem-sankhya-zebrazm400
 \\\\192.0.0.61\\mln-embalagem-frenteverso-sp5200s
 \\\\192.0.0.61\\mln-embalagem-preto-sp5200s
-
----MASTERLINE LOG---
-
+-------------------------------------------------
+MASTERLINE LOG
+-------------------------------------------------
 \\\\192.0.0.61\\mln-log-estoque-frenteverso-sp5210sf
 \\\\192.0.0.61\\mln-log-estoque-preto-sp5210sf
 \\\\192.0.0.61\\mln-log-estoque-rascunho-sp5210sf
 \\\\192.0.0.61\\mln-log-estoque-sankhya-gk420t
-
----NÃO INSERIDAS, PRECISA REVISAR
-
-Financeiro endereço: \\192.0.0.61\csc-financeiro-1102w
+-------------------------------------------------
+NÃO INSERIDAS, PRECISA REVISAR
+-------------------------------------------------
 Keila endereço: \\192.0.0.61\csc-keila-1102w
 \\192.0.0.61\mln-backup-preto-hpp1102w
-192.0.0.217 Financeiro
-MLN - Flexografia 192.0.0.100

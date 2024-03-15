@@ -1,10 +1,10 @@
 console.log('Script loaded successfully');
 
 document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM loaded successfully');
     function adicionarImpressora(printerName) {
         console.log('Printer name:', printerName);
 
-        // Make a POST request to the Python server to add the printer
         fetch('/adicionarImpressora', {
             method: 'POST',
             headers: {
@@ -34,8 +34,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     btnAdicionar.forEach(button => {
         button.addEventListener('click', function () {
-            let printerName = this.parentElement.querySelector('.printer-name').innerText.trim();
-            adicionarImpressora(printerName);
+            let printerNameElement = this.parentElement.querySelector('.printer-name.visually-hidden');
+            if (printerNameElement) {
+                let printerName = printerNameElement.innerText.trim();
+                adicionarImpressora(printerName);
+            } else {
+                console.error('Printer name element not found');
+                alert('Elemento do nome da impressora não encontrado');
+            }
         }, { once: true });
     });
-});
+})
