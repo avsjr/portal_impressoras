@@ -58,18 +58,19 @@ platina_log_printers = {
 masterline_main_printers = {
     "MLN ADM": "\\\\192.0.0.61\\mln-adm-a3-mpc3503",
     "Almoxarifado Pigmento - Sankhya": "\\\\192.0.0.61\\mln-almoxpigmento-sankhya-zebrazm400",
-    "Almoxarifado Quimico": "\\\\192.0.0.61\\mln-almoxquimica-frenteverso-brother8157",
-    "Almoxarifado Rotulos": "\\\\192.0.0.61\\mln-almoxrotulos-preto-hpp1102w",
-    "Almoxarifado Rotulos - Sankhya": "\\\\192.0.0.61\\mln-almoxrotulos-sankhya-zebrazt410",
+    "Almoxarifado Quimico": "\\\\192.0.0.61\\mln-almoxquimica-preto-brother8157",
+    "Almoxarifado Quimico - Etiquetas": "\\\\192.0.0.61\\mln-almoxquimica-etiquetas-zebrazm400",
+    "Almoxarifado Rótulos": "\\\\192.0.0.61\\mln-almoxrotulos-preto-b400v4ps",
+    "Almoxarifado Rótulos - Sankhya": "\\\\192.0.0.61\\mln-almoxrotulos-sankhya-zebrazt410",
     "Ambulatório": "\\\\192.0.0.61\\mln-ambulatorio-preto-sp5210sf",
     "RH": "\\\\192.0.0.61\\mln-dp-preto-mpc3003",
     "Envase": "\\\\192.0.0.61\\mln-envase-preto-sp5200s",
-    "Corpore01": "\\\\192.0.0.61\\mln-etiquetas-corpore01-zebrazt410",
-    "Corpore02": "\\\\192.0.0.61\\mln-etiquetas-corpore02-zebrazt410",
-    "Corpore03": "\\\\192.0.0.61\\mln-etiquetas-corpore03-zebrazt410",
-    "Corpore05": "\\\\192.0.0.61\\mln-etiquetas-corporeO5-zebrazt411",
-    "Corpore06": "\\\\192.0.0.61\\mln-etiquetas-corpore06-zebrazt411",
-    "Corpore07": "\\\\192.0.0.61\\mln-etiquetas-corpore07-zebrazt411",
+    "Etiquetas Corpore01": "\\\\192.0.0.61\\mln-etiquetas-corpore01-zebrazt410",
+    "Etiquetas Corpore02": "\\\\192.0.0.61\\mln-etiquetas-corpore02-zebrazt410",
+    "Etiquetas Corpore03": "\\\\192.0.0.61\\mln-etiquetas-corpore03-zebrazt410",
+    "Etiquetas Corpore05": "\\\\192.0.0.61\\mln-etiquetas-corporeO5-zebrazt411",
+    "Etiquetas Corpore06": "\\\\192.0.0.61\\mln-etiquetas-corpore06-zebrazt411",
+    "Etiquetas Corpore07": "\\\\192.0.0.61\\mln-etiquetas-corpore07-zebrazt411",
     "Fisico Quimico - Sankhya": "\\\\192.0.0.61\\mln-fisicoquimico-sankhyal-zebrazt411",
     "Manutenção": "\\\\192.0.0.61\\mln-manutencao-preto-sp5210sf",
     "P&D": "\\\\192.0.0.61\\mln-ped-preto-mpc3003",
@@ -88,7 +89,7 @@ masterline_emb_printers = {
     "MLN EMB - Sankhya": "\\\\192.0.0.61\\mln-emabalagem-sankhya-zebrazm400"
 }
 masterline_flexo_printers = {}
-# Define routes for each office's printer page
+
 @app.route('/')
 def index():
     return render_template('index.html')
